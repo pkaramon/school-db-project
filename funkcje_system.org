@@ -1,0 +1,66 @@
+* Funkcje użytkowników i systemu
+  * *Użytkownik niezarejestrowany*
+    1. Przegłądanie oferty: Dostep do ogólnej oferty edukacyjnej bez możliwości rejestracji.
+    2. Utworzenie konta.
+  * *Użytkownik zarejestrowany*
+    1. Przeglądanie oferty edukacyjnej: Możliwość przeglądania dostepnych kursów, webinarów i studiów oraz pojedynczych spotkań studyjnych.
+    2. Przeglądanie historii platnosci (nazwa zakupionego przedmiotu, kwota, data, informacja o tym, czy płatność się powiodła).
+    3. Zarządanie kontem: Edycja danych osobowych.
+    4. Zakup dostępu do płatnego webinaru.
+    5. Zakup dostępu do nagrania z płatnego webinaru.
+    6. Zapisanie się na kurs.
+    7. Zapisanie się na studia.
+    8. Zapisanie się na płatne pojedyncze spotkanie studyjne.
+    9. Uczestnictwo w webinarze.
+    10. Oglądanie udostępnionych nagrań z webinarów.
+    11. Dodanie/usunięcie produktu z/do koszyka.
+    12. Dokonanie płatności za produkt.
+  * *Uczestnik kursu*
+    1. Przeglądanie modułów które składają sie na kurs.
+    2. Dostep do harmonogramu: moduły stacjonarne - data, miejsce, prowadzący; moduly on-line synchroniczne - data, prowadzący, link do spotkania; moduły on-line asynchroniczne - link do nagrania; moduły hybrydowe - połączenie harmonogramów dla modułów stacjonarnych i online.
+    3. Dostęp do informacji o postepie w kursie/zaliczeniu.
+    4. Uczestnictwo w modułach on-line synchronicznych.
+    5. Oglądanie nagrań (moduły on-line asynchroniczne).
+    6. Oglądanie nagran z modułów on-line synchronicznych.
+  * *Student*
+    1. Przeglądanie harmonogramu zajęć (kiedy, gdzie i z jakim prowadzącym).
+    2. Przeglądanie programu studiów.
+    3. Przeglądanie ocen.
+    4. Dostęp do danych o frekwencji na zajeciach.
+  * *Księgowa*
+    1. Zarządzanie płatnościami: Przeglądanie i monitorowanie płatności użytkowników.
+    2. Generowanie raportów finansowych: Tworzenie zestawień przychodów z poszczególnych wydarzeń.
+    3. Weryfikacja płatności odroczonych: Monitorowanie płatności odroczonych dla stałych klientów.
+  * *Wykładowca webinarów*
+    1. Stworzenie webinaru.
+    2. Modyfikacja danych webinaru.
+  * *Nauczyciel zwiazany z kursami*
+    1. Tworzenie/modyfikacja kursów.
+    2. Tworzenie/modyfikacja modułów.
+    3. Tworzenie/modyfikacja zajęć.
+    4. Wpisywanie obecności.
+  * *Nauczyciel akademicki*
+    1. Tworzenie/modyfikacja przedmiotów.
+    2. Tworzenie/modyfikacja egzaminów.
+    3. Dodawanie/modyfikacja ocen z egzaminów.
+    4. Tworzenie staży.
+    5. Wpisywanie zaliczenia ze stażu.
+    6. Aktualizacja danych dotyczących stażu danego studenta.
+  * *Sekretariat*
+    1. Wysyłanie dyplomów.
+    2. Raporty bilokacji.
+    3. Informacje o harmonogramach pracowników i uczniów.
+  * *Tłumacz*
+    1. Posiada dostep do wszystkich webinarów oraz kursów i studiów online.
+    2. Dodawanie materiałów: może dodawać do bazy przetłumaczone materiały.
+  * *Administrator*
+    1. Zarząda bazą danych.
+    2. Ma nieograniczone uprawnienia.
+  * *Dyrektor szkoły*
+    1. Odroczenie płatności.
+    2. Dodanie pracowników.
+    3. Nadawanie pracownikom ról.
+    4. Utworzenie/modyfikacja studiów.
+    5. Utworzenie/modyfikacja kierunku studiów.
+    6. Dostep do raportów finansowych.
+    7. Dostep do raportów dotyczacych pracowników.
