@@ -1,3 +1,4 @@
+
 -- Widok prezentujący konflikty terminów zajęć dla użytkowników
 CREATE OR ALTER VIEW ActivityConflicts AS
 WITH AUX AS (
@@ -56,7 +57,9 @@ GO
 
 -- Widok prezentujący bieżącą ofertę edukacyjną (webinary, kursy, studia)
 CREATE OR ALTER VIEW SchoolOffer AS
-SELECT 'Webinar' as'ProductType',
+SELECT 
+        W.WebinarID as 'ProductID',
+       'Webinar' as'ProductType',
         W.WebinarName,
         W.Description,
         Price as 'TotalPrice',
@@ -65,18 +68,19 @@ SELECT 'Webinar' as'ProductType',
         EndDate
 FROM Webinars W 
 JOIN Products P ON W.WebinarID = P.ProductID AND P.ClosedAt IS NULL
-WHERE W.StartDate < GETDATE()
 UNION
-SELECT 'Course', C.CourseName, C.[Description], P.Price, P.AdvancePayment, C.StartDate, C.EndDate
+SELECT C.CourseID, 'Course', C.CourseName, C.[Description], P.Price, P.AdvancePayment, C.StartDate, C.EndDate
 FROM Courses C 
-JOIN Products P ON P.ProductID = C.CourseID AND P.ClosedAt IS NULL
+JOIN Products P ON P.ProductID = C.CourseID AND P.ClosedAt IS NULL AND C.StartDate > GETDATE()
 UNION
-SELECT 'Studies', S.Name, S.[Description], P.Price, P.AdvancePayment, S.StartDate, S.EndDate
+SELECT S.StudiesID, 'Studies', S.Name, S.[Description], P.Price, P.AdvancePayment, S.StartDate, S.EndDate
 FROM Studies S
 JOIN Products P ON P.ProductID = S.StudiesID AND P.ClosedAt IS NULL
-WHERE S.StartDate < GETDATE()
+WHERE S.StartDate > GETDATE()
 UNION
-SELECT 'Public Study Session',
+SELECT 
+        PSS.PublicStudySessionID,
+       'Public Study Session',
        'Sesja również dla osób z zewnątrz' + S.[Description],
         S.[Description],
         P.Price, 
@@ -87,7 +91,7 @@ FROM PublicStudySessions PSS
 JOIN Products P ON P.ProductID = PSS.PublicStudySessionID AND P.ClosedAt IS NULL
 JOIN StudiesSessions SS ON SS.StudiesSessionID = PSS.StudiesSessionID
 JOIN Subjects S ON S.SubjectID = SS.SubjectID
-WHERE SS.StartDate < GETDATE();
+WHERE SS.StartDate > GETDATE();
 GO
 
 -- Widok prezentujący harmonogram pracy pracowników
@@ -130,27 +134,9 @@ FROM StudiesSessions SS
 JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;
 GO
 
--- Funkcja zwracająca harmonogram pracownika w określonym przedziale czasowym
-CREATE OR ALTER FUNCTION GetEmployeeTimetable 
-(
-    @EmployeeID INT,
-    @StartDate DATETIME,
-    @EndDate DATETIME
-)
-RETURNS TABLE
-AS
-RETURN 
-(
-    SELECT * 
-    FROM EmployeeTimeTable
-    WHERE EmployeeID = @EmployeeID
-      AND StartDate >= @StartDate
-      AND EndDate <= @EndDate
-);
-GO
 
 -- Widok prezentujący statystyki dotyczące aktywności pracowników
-CREATE VIEW EmployeeStatistics AS
+CREATE OR ALTER VIEW EmployeeStatistics AS
 SELECT 
     E.EmployeeID,
     P.FirstName, 
@@ -349,27 +335,6 @@ JOIN Employees E ON E.EmployeeID = SS.LecturerID
 JOIN People P ON P.PersonID = E.EmployeeID;
 GO
 
--- Funkcja zwracająca harmonogram zajęć użytkownika w określonym przedziale czasowym
-CREATE OR ALTER FUNCTION GetUserTimeTable 
-(
-    @UserID INT,
-    @StartDate DATETIME,
-    @EndDate DATETIME
-)
-RETURNS TABLE
-AS
-RETURN
-(
-    SELECT 
-        T.*
-    FROM 
-        TimeTableForAllUsers T
-    WHERE 
-        T.UserID = @UserID
-        AND T.StartDate >= @StartDate
-        AND T.EndDate <= @EndDate
-);
-GO
 
 
 -- Widok prezentujący listę dłużników
@@ -552,7 +517,7 @@ GO
 
 
 -- Widok prezentujący ogólne statystyki frekwencji na zajęciach
-CREATE OR ALTER VIEW GeneralAttedance AS
+CREATE OR ALTER VIEW GeneralAttendance AS
 WITH StudiesSessionsInfo AS (
   SELECT 
     SS.StudiesSessionID, 

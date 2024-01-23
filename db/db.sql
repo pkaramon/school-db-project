@@ -19,8 +19,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CartHistory';
 END; 
 
@@ -156,8 +156,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Carts';
 END; 
 
@@ -250,8 +250,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CourseOfflineSessions';
 END; 
 
@@ -367,8 +367,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CourseOnlineSessions';
 END; 
 
@@ -513,8 +513,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CourseParticipants';
 END; 
 
@@ -781,8 +781,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CourseSessionsAttendance';
 END; 
 
@@ -882,8 +882,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CourseStationarySessions';
 END; 
 
@@ -1113,8 +1113,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Courses';
 END; 
 
@@ -1318,8 +1318,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'CoursesSessions';
 END; 
 
@@ -1458,8 +1458,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'DaysInInternship';
 END; 
 
@@ -1596,8 +1596,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'DiplomasSent';
 END; 
 
@@ -1733,8 +1733,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'EmployeeRoles';
 END; 
 
@@ -1827,8 +1827,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Employees';
 END; 
 
@@ -1926,8 +1926,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Exams';
 END; 
 
@@ -2129,8 +2129,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'ExamsGrades';
 END; 
 
@@ -2221,8 +2221,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'FieldsOfStudies';
 END; 
 
@@ -2321,8 +2321,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'InternshipDetails';
 END; 
 
@@ -2548,8 +2548,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Internships';
 END; 
 
@@ -2684,8 +2684,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Languages';
 END; 
 
@@ -2756,8 +2756,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'MadeUpAttendance';
 END; 
 
@@ -2874,8 +2874,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'MaxDaysForPaymentBeforeCourseStart';
 END; 
 
@@ -3014,8 +3014,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'MaxDaysForPaymentBeforeStudiesStart';
 END; 
 
@@ -3154,8 +3154,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'MinAttendancePercentageToPassCourse';
 END; 
 
@@ -3294,8 +3294,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'MinAttendancePercentageToPassInternship';
 END; 
 
@@ -3434,8 +3434,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'MinAttendancePercentageToPassStudies';
 END; 
 
@@ -3571,8 +3571,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Modules';
 END; 
 
@@ -3685,8 +3685,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'OnlineStudiesSessions';
 END; 
 
@@ -3783,8 +3783,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Payments';
 END; 
 
@@ -3953,8 +3953,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'People';
 END; 
 
@@ -4246,8 +4246,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'PeopleDataChangeHistory';
 END; 
 
@@ -4785,8 +4785,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'ProductPriceChangeHistory';
 END; 
 
@@ -4973,8 +4973,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Products';
 END; 
 
@@ -5136,8 +5136,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'PublicStudySessionParticipants';
 END; 
 
@@ -5317,8 +5317,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'PublicStudySessions';
 END; 
 
@@ -5409,8 +5409,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'PublicStudySessionsAttendanceForOutsiders';
 END; 
 
@@ -5505,8 +5505,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'RecordingAccessTime';
 END; 
 
@@ -5641,8 +5641,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Roles';
 END; 
 
@@ -5715,8 +5715,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'StationaryStudiesSessions';
 END; 
 
@@ -5883,8 +5883,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Students';
 END; 
 
@@ -6161,8 +6161,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Studies';
 END; 
 
@@ -6414,8 +6414,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'StudiesSessions';
 END; 
 
@@ -6616,8 +6616,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'StudiesSessionsAttendence';
 END; 
 
@@ -6709,8 +6709,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'SubjectMakeUpPossibilities';
 END; 
 
@@ -6803,8 +6803,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Subjects';
 END; 
 
@@ -6937,8 +6937,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Users';
 END; 
 
@@ -6991,8 +6991,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'WebinarParticipants';
 END; 
 
@@ -7182,8 +7182,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'Webinars';
 END; 
 
@@ -7450,8 +7450,8 @@ BEGIN
     EXEC sp_dropextendedproperty
         @name = N'MS_Description',
         @level0type = N'SCHEMA',
-    	@level0name = 'dbo',
-    	@level1type = N'TABLE',
+      @level0name = 'dbo',
+      @level1type = N'TABLE',
         @level1name = 'WebinarsAttendence';
 END; 
 

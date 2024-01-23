@@ -1,4 +1,4 @@
-% Created 2024-01-22 Mon 21:22
+% Created 2024-01-23 Tue 03:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -161,7 +161,7 @@
 \tableofcontents
 
 \section{Funkcje użytkowników i systemu}
-\label{sec:org85d6be8}
+\label{sec:org9c849e4}
 \begin{itemize}
 \item \textbf{Użytkownik niezarejestrowany}
 \begin{enumerate}
@@ -254,9 +254,9 @@
 \end{enumerate}
 \end{itemize}
 \section{Tabele}
-\label{sec:org3ff74e5}
+\label{sec:orgcdc8edd}
 \subsection{Roles}
-\label{sec:orgd97bc29}
+\label{sec:org0611d1a}
 Tabela Roles przechowuje informacje o różnych rolach w systemie.
 \begin{itemize}
 \item \texttt{RoleID} - Unikalny identyfikator roli, generowany automatycznie.
@@ -273,7 +273,7 @@ Tabela Roles przechowuje informacje o różnych rolach w systemie.
 \end{Verbatim}
 \end{Code}
 \subsection{EmployeeRoles}
-\label{sec:org8090198}
+\label{sec:org8fd644d}
 Tabela EmployeeRoles przechowuje informacje o rolach przypisanych pracownikom systemu.
 \begin{itemize}
 \item \texttt{EmployeeRoleEntryID} - Unikalny identyfikator wpisu roli pracownika, który jest generowany automatycznie.
@@ -304,7 +304,7 @@ się do kolumny EmployeeID w tabeli Employees.
 \end{Verbatim}
 \end{Code}
 \subsection{Webinars}
-\label{sec:orgdbb0d53}
+\label{sec:org3d5b38a}
 Tabela Webinars przechowuje informacje dotyczące webinarów oferowanych w systemie.
 \begin{itemize}
 \item \texttt{WebinarID} - Unikalny identyfikator webinaru.
@@ -384,7 +384,7 @@ StartDate musi być przed EndDate
 \end{Code}
 \end{itemize}
 \subsection{Languages}
-\label{sec:orgb824a52}
+\label{sec:org85a8377}
 Tabela Languages przechowuje informacje o dostępnych językach w systemie.
 \begin{itemize}
 \item \texttt{LanguageID} - Unikalny identyfikator języka, generowany automatycznie.
@@ -401,7 +401,7 @@ Tabela Languages przechowuje informacje o dostępnych językach w systemie.
 \end{Verbatim}
 \end{Code}
 \subsection{Courses}
-\label{sec:orgcc578c2}
+\label{sec:orgbbe3872}
 Tabela Courses przechowuje informacje o kursach dostępnych w systemie.
 \begin{itemize}
 \item \texttt{CourseID} - Unikalny identyfikator kursu.
@@ -463,7 +463,7 @@ EndDate musi być po StartDate
 \end{Code}
 \end{itemize}
 \subsection{Modules}
-\label{sec:org794543b}
+\label{sec:orgdb847b9}
 Tabela Modules przechowuje informacje o modułach składających się na kursy w systemie.
 \begin{itemize}
 \item \texttt{ModuleID} - Unikalny identyfikator modułu, automatycznie generowany przez system.
@@ -486,7 +486,7 @@ Tabela Modules przechowuje informacje o modułach składających się na kursy w
 \end{Verbatim}
 \end{Code}
 \subsection{Studies}
-\label{sec:org9000340}
+\label{sec:org2607a95}
 Tabela Studies przechowuje informacje o oferowanych programach studiów.
 \begin{itemize}
 \item \texttt{StudiesID} - Unikalny identyfikator studiów
@@ -562,7 +562,7 @@ Numery semestrów zaczynają się od 1
 \end{Code}
 \end{itemize}
 \subsection{ExamsGrades}
-\label{sec:org1225e0f}
+\label{sec:org5915679}
 Tabela ExamGrades przechowuje informacje o ocenach z przeprowadzonych egzaminów.
 \begin{itemize}
 \item \texttt{StudentID} - Identyfikator egzaminowanego studenta
@@ -600,7 +600,7 @@ Przyjmujemy skalę ocen jak na publicznej uczelni wyższej
 \end{Code}
 \end{itemize}
 \subsection{Internships}
-\label{sec:orge3a866a}
+\label{sec:org4ec699f}
 Tabela Internships przechowuje informacje o wszystkich oferowanych programach stażowych.
 \begin{itemize}
 \item \texttt{InternshipID} - Unikalny identyfikator programu stażowego.
@@ -639,7 +639,7 @@ EndDate musi być po StartDate
 \end{Code}
 \end{itemize}
 \subsection{InternshipDetails}
-\label{sec:org14339e2}
+\label{sec:org5e46b79}
 Tabela InternshipDetails przechowuje informacje na temat przebiegu stażu dla każdego studenta.
 \begin{itemize}
 \item \texttt{StudentID} - ID studenta
@@ -700,7 +700,7 @@ Kod pocztowy ma być w prawidłowym formacie
 \end{Code}
 \end{itemize}
 \subsection{Products}
-\label{sec:org350add9}
+\label{sec:orge475725}
 Tabela Products przechowuje informacje o produktach w systemie.
 \begin{itemize}
 \item \texttt{ProductID} - Unikalny identyfikator produktu.
@@ -775,7 +775,7 @@ ClosedAt musi być po AddedAt
 \end{Code}
 \end{itemize}
 \subsection{Payments}
-\label{sec:orgbbf8972}
+\label{sec:org1107a90}
 Tabela Payments przechowuje informacje o płatnościach dokonanych przez użytkowników.
 \begin{itemize}
 \item \texttt{PaymentID} - Unikalny identyfikator płatności.
@@ -783,7 +783,7 @@ Tabela Payments przechowuje informacje o płatnościach dokonanych przez użytko
 \item \texttt{ProductID} - Identyfikator produktu, na który użytkownik dokonał płatności.
 \item \texttt{Price} - Kwota płatności.
 \item \texttt{Date} - Data dokonania płatności.
-\item \texttt{Status} - Status płatności (np. ``Accepted'', ``Rejected'').
+\item \texttt{Status} - Status płatności ``Successful'' albo ``Failed''
 \end{itemize}
 \begin{Code}
 \begin{Verbatim}
@@ -837,7 +837,7 @@ Data płatności nie może być z przyszłości
 \end{Code}
 \end{itemize}
 \subsection{Carts}
-\label{sec:orgfc6a64a}
+\label{sec:org8285fe2}
 Tabela Carts przechowuje informacje o koszykach zakupowych użytkowników.
 \begin{itemize}
 \item \texttt{UserID} - Identyfikator użytkownika, do którego przypisany jest koszyk.
@@ -875,7 +875,7 @@ AddedAt nie może być w przyszłości
 \end{Code}
 \end{itemize}
 \subsection{WebinarsAttendence}
-\label{sec:org0d027c1}
+\label{sec:org1fe8433}
 Tabela WebinarsAttendance przechowuje informacje dotyczące uczestnictwa w webinarze.
 \begin{itemize}
 \item \texttt{WebinarID} - Identyfikator webinaru, do którego odnosi się uczestnictwo.
@@ -900,7 +900,7 @@ Tabela WebinarsAttendance przechowuje informacje dotyczące uczestnictwa w webin
 \end{Verbatim}
 \end{Code}
 \subsection{StationaryStudiesSessions}
-\label{sec:orge6baa47}
+\label{sec:orgeb6166d}
 Tabela StationaryStudiesSessions przechowuje informacje na temat zajęć stacjonarnych.
 \begin{itemize}
 \item \texttt{StationaryStudiesSessionID} - Unikalny identyfikator zajęć stacjonarnych
@@ -944,7 +944,7 @@ Kod pocztowy jest w poprawny formacie
 \end{Code}
 \end{itemize}
 \subsection{OnlineStudiesSessions}
-\label{sec:org97acb30}
+\label{sec:org039378f}
 Tabela OnlineStudiesSessions przechowuje informacje o zajęciach odbywanych w formie zdalnej.
 \begin{itemize}
 \item \texttt{OnlineStudiesSessionID} - Unikalny identyfikator zajęć online
@@ -966,7 +966,7 @@ Tabela OnlineStudiesSessions przechowuje informacje o zajęciach odbywanych w fo
 \end{Verbatim}
 \end{Code}
 \subsection{StudiesSessions}
-\label{sec:org9cbc9e6}
+\label{sec:org6c25843}
 Tabela StudiesSessions przechowuje informacje o wszystkich zajęciach w ramach każdego z przedmiotów.
 \begin{itemize}
 \item \texttt{StudiesSessionID} - Unikalny identyfikator zajęć
@@ -1027,7 +1027,7 @@ EndDate musi być po StartDate
 \end{Code}
 \end{itemize}
 \subsection{StudiesSessionsAttendence}
-\label{sec:orgf486b62}
+\label{sec:org958fb89}
 Tabela StudiesSessionsAttendence przechowuje informacje o obecnościach studentów na zajęciach.
 \begin{itemize}
 \item \texttt{SessionID} - Identyfikator zajęć
@@ -1052,7 +1052,7 @@ Tabela StudiesSessionsAttendence przechowuje informacje o obecnościach student�
 \end{Verbatim}
 \end{Code}
 \subsection{CourseOfflineSessions}
-\label{sec:org2f55d3f}
+\label{sec:org545ef01}
 Tabela CourseOfflineSessions przechowuje informacje o sesjach kursów offline.
 \begin{itemize}
 \item \texttt{CourseOfflineSessionID} - Unikalny identyfikator sesji kursu offline.
@@ -1090,7 +1090,7 @@ UploadedAt nie może być w przyszłości
 \end{Code}
 \end{itemize}
 \subsection{CourseStationarySessions}
-\label{sec:orgf158ed7}
+\label{sec:org029541e}
 Tabela CourseStationarySessions przechowuje informacje o sesjach stacjonarnych kursów.
 \begin{itemize}
 \item \texttt{CourseStationarySessionID} - Unikalny identyfikator sesji stacjonarnej kursu.
@@ -1158,7 +1158,7 @@ MaxStudents musi być większy od zera
 \end{Code}
 \end{itemize}
 \subsection{CourseOnlineSessions}
-\label{sec:org0bfe470}
+\label{sec:orgab7b302}
 Tabela CourseOnlineSessions przechowuje informacje o sesjach kursów online.
 \begin{itemize}
 \item \texttt{CourseOnlineSessionID} - Unikalny identyfikator sesji kursu online.
@@ -1198,7 +1198,7 @@ EndDate musi być po StartDate
 \end{Code}
 \end{itemize}
 \subsection{CoursesSessions}
-\label{sec:org5d24d61}
+\label{sec:orgce65a56}
 Tabela CoursesSessions przechowuje informacje o sesjach kursów.
 \begin{itemize}
 \item \texttt{CourseSessionID} - Unikalny identyfikator sesji kursu.
@@ -1233,7 +1233,7 @@ Tabela CoursesSessions przechowuje informacje o sesjach kursów.
 \end{Verbatim}
 \end{Code}
 \subsection{CourseSessionsAttendance}
-\label{sec:org3652f5a}
+\label{sec:org9220858}
 Tabela CourseSessionsAttendance przechowuje informacje o uczestnictwie w sesjach kursu.
 \begin{itemize}
 \item \texttt{CourseParticipantID} - Identyfikator uczestnika kursu, który jest jednocześnie kluczem obcym powiązanym z tabelą CourseParticipants.
@@ -1259,7 +1259,7 @@ Tabela CourseSessionsAttendance przechowuje informacje o uczestnictwie w sesjach
 \end{Verbatim}
 \end{Code}
 \subsection{PublicStudySessions}
-\label{sec:org077d4d2}
+\label{sec:org1ba3b83}
 Tabela PublicStudySessions przechowuje informacje o zajęciach otwartych  (tj. takich, w których użytkownik może uczestniczyć bez zapisywania się na studia).
 \begin{itemize}
 \item \texttt{PublicStudySessionID} - Unikalny identyfikator zajęć otwartych
@@ -1285,7 +1285,7 @@ Tabela PublicStudySessions przechowuje informacje o zajęciach otwartych  (tj. t
 \end{Verbatim}
 \end{Code}
 \subsection{Students}
-\label{sec:org9cfb669}
+\label{sec:org8df5e67}
 Tabela Students przechowuje podstawowe informacje o studentach.
 \begin{itemize}
 \item \texttt{StudentID} - Unikalny identyfikator studenta
@@ -1357,7 +1357,7 @@ Zaliczka musi być większa od zera i mniejsza od całkowitej ceny studiów.
 \end{Code}
 \end{itemize}
 \subsection{CourseParticipants}
-\label{sec:org7c3b8e7}
+\label{sec:org4b83f71}
 Tabela CourseParticipants przechowuje informacje o uczestnikach kursów.
 \begin{itemize}
 \item \texttt{CourseParticipantID} - Unikalny identyfikator uczestnika kursu.
@@ -1429,7 +1429,7 @@ Zaliczka nie może być ujemna oraz nie może być większa od całkowitej ceny
 \end{Code}
 \end{itemize}
 \subsection{RecordingAccessTime}
-\label{sec:orga1e4e34}
+\label{sec:orge1b9463}
 Tabela RecordingAccessTime przechowuje informacje dotyczące dostępu do nagrania webinaru.
 \begin{itemize}
 \item \texttt{RecordingAcessTimeID} - Unikalny identyfikator dostępu do nagrania.
@@ -1478,7 +1478,7 @@ Liczba dni na którą udostępniamy nagrani musi być większa lub równa 0
 \end{Code}
 \end{itemize}
 \subsection{MinAttendancePercentageToPassInternship}
-\label{sec:orgd917084}
+\label{sec:org1ea943c}
 Tabela MinAttendancePercentageToPassInternship przechowuje informacje o minimalnej obecności potrzebnej do zaliczenia stażu.
 \begin{itemize}
 \item \texttt{MinAttendancePercentageToPassInternshipID} - Unikalny identyfikator procentu zaliczenia stażu
@@ -1526,7 +1526,7 @@ Procent obecności musi być w przedziale od 0 do 1 włącznie
 \end{Code}
 \end{itemize}
 \subsection{MaxDaysForPaymentBeforeStudiesStart}
-\label{sec:org19e6b4a}
+\label{sec:org0791f07}
 Tabela MaxDaysForPaymentBeforeStudiesStart przechowuje informacje o ostatecznych terminach spłaty studiów.
 \begin{itemize}
 \item \texttt{MaxDaysForPaymentBeforeStudiesStartID} - Unikalny identyfikator ostatecznego terminu spłaty
@@ -1574,7 +1574,7 @@ Liczba dni przed rozpoczęciem musi być większa od 0
 \end{Code}
 \end{itemize}
 \subsection{MinAttendancePercentageToPassCourse}
-\label{sec:orgde1d27f}
+\label{sec:org4d14afb}
 Tabela MinAttendancePercentageToPassCourse przechowuje informacje dotyczące minimalnego procentowego udziału w zajęciach wymaganego do zaliczenia kursu.
 \begin{itemize}
 \item \texttt{MinAttendancePercentageToPassCourseID} - Unikalny identyfikator minimalnego procentowego udziału w zajęciach wymaganego do zaliczenia kursu.
@@ -1622,7 +1622,7 @@ Procent obecności musi być w przedziale od 0 do 1 włącznie
 \end{Code}
 \end{itemize}
 \subsection{DaysInInternship}
-\label{sec:org2aefac6}
+\label{sec:org1080ab4}
 Tabela DaysInInternship przechowuje informacje o czasie trwania stażu.
 \begin{itemize}
 \item \texttt{DaysInInternshipID} - Unikalny identyfikator czasu trwania dla stażu
@@ -1670,7 +1670,7 @@ Liczba dni stażu musi być większa od zera
 \end{Code}
 \end{itemize}
 \subsection{MaxDaysForPaymentBeforeCourseStart}
-\label{sec:org98aa3c9}
+\label{sec:org84eb07e}
 Tabela MaxDaysForPaymentBeforeCourseStart przechowuje informacje dotyczące maksymalnej liczby dni, w jaką można dokonać płatności przed rozpoczęciem kursu.
 \begin{itemize}
 \item \texttt{MaxDaysForPaymentBeforeCourseStartID} - Unikalny identyfikator określający maksymalną liczbę dni do dokonania płatności przed rozpoczęciem kursu.
@@ -1718,7 +1718,7 @@ Liczba dni przed rozpoczęciem musi być większa od 0
 \end{Code}
 \end{itemize}
 \subsection{MinAttendancePercentageToPassStudies}
-\label{sec:org37df5cd}
+\label{sec:orgd3d8337}
 Tabela MinAttendancePercentageToPassStudies zawiera informacje o minimalnych wymaganiach dotyczących obecności na zajęciach dla każdego kierunku studiów.
 \begin{itemize}
 \item \texttt{MinAttendancePercentageToPassStudiesID} - Unikalny identyfikator procentu zaliczenia studiów
@@ -1766,7 +1766,7 @@ Procent obecności musi być w przedziale od 0 do 1 włącznie
 \end{Code}
 \end{itemize}
 \subsection{People}
-\label{sec:orge9b6ab2}
+\label{sec:orgec1a283}
 Tabela People przechowuje informacje o osobach w systemie.
 \begin{itemize}
 \item \texttt{PersonID} - Unikalny identyfikator osoby, generowany automatycznie.
@@ -1844,7 +1844,7 @@ Kod pocztowy musi być w poprawnym formacie.
 \end{Code}
 \end{itemize}
 \subsection{PeopleDataChangeHistory}
-\label{sec:orgb96d8b7}
+\label{sec:orgd3e0bed}
 Tabela PeopleDataChangeHistory przechowuje historię zmian danych osobowych w systemie.
 \begin{itemize}
 \item \texttt{PersonDataChangeHistoryID} - Unikalny identyfikator wpisu historii zmian danych osobowych, generowany automatycznie.
@@ -1957,7 +1957,7 @@ Nowy numer telefonu składa się z cyfr
 \end{Code}
 \end{itemize}
 \subsection{WebinarParticipants}
-\label{sec:org4bdd9b3}
+\label{sec:orgf6b6fb3}
 Tabela WebinarParticipants przechowuje informacje o uczestnikach webinarów.
 \begin{itemize}
 \item \texttt{WebinarParticipantID} - Unikalny identyfikator uczestnika webinaru.
@@ -2020,7 +2020,7 @@ FullPricePaymentID może być NULL gdy istnieje DuePostponedPayment lub gdy Webi
 \end{Code}
 \end{itemize}
 \subsection{PublicStudySessionParticipants}
-\label{sec:org782e313}
+\label{sec:orgbbc4066}
 Tabela PublicStudySessionParticipants przechowuje informacje o uczestnikach zajęć otwartych.
 \begin{itemize}
 \item \texttt{PublicStudySessionParticipantID} - Unikalny identyfikator uczestnika zajęć otwartych
@@ -2064,7 +2064,7 @@ Warunki integralnościowe:
 \end{Code}
 \end{itemize}
 \subsection{PublicStudySessionsAttendanceForOutsiders}
-\label{sec:org328e03d}
+\label{sec:org17a5cc8}
 Tabela PublicStudySessionsAttendanceForOutsiders przechowuje informacje o obecności użytkowników niezapisanych na studia w zajęciach otwartych.
 \begin{itemize}
 \item \texttt{PublicStudySessionID} - Identyfikator zajęć otwartych
@@ -2088,7 +2088,7 @@ Tabela PublicStudySessionsAttendanceForOutsiders przechowuje informacje o obecno
 \end{Verbatim}
 \end{Code}
 \subsection{SubjectMakeUpPossibilities}
-\label{sec:org0cf0d12}
+\label{sec:org2ec53c9}
 Tabela SubjectMakeUpPossibilities przechowuje informacje na temat wszystkich możliwych ``zastępstw'', które student może zrealizować w przypadku niezaliczenia przez niego danego przedmiotu.
 \begin{itemize}
 \item \texttt{SubjectID} - Identyfikator przedmiotu
@@ -2126,7 +2126,7 @@ Jest to liczba odrobionych zajęć z przedmiotu, zatem musi być większa od zer
 \end{Code}
 \end{itemize}
 \subsection{MadeUpAttendance}
-\label{sec:org11f55b7}
+\label{sec:orgfef5c65}
 W tabeli MadeUpAttendance odnotowywane są wszystkie ``zastępstwa'' dla studentów zaliczających przedmiot innym produktem.
 \begin{itemize}
 \item \texttt{MadeUpAttendanceID} - Unikalny identyfikator zrealizowanego ``zastępstwa''
@@ -2153,7 +2153,7 @@ W tabeli MadeUpAttendance odnotowywane są wszystkie ``zastępstwa'' dla student
 \end{Verbatim}
 \end{Code}
 \subsection{ProductPriceChangeHistory}
-\label{sec:org9b99add}
+\label{sec:org0410663}
 Tabela ProductPriceChangeHistory przechowuje historię zmian cen produktów.
 \begin{itemize}
 \item \texttt{ProductPriceChangeHistoryID} - Unikalny identyfikator historii zmian cen produktów.
@@ -2215,7 +2215,7 @@ Jeżeli wpisano zaliczkę to musi być ona większa od zera
 \end{Code}
 \end{itemize}
 \subsection{CartHistory}
-\label{sec:orgf07c53a}
+\label{sec:org431df93}
 Tabela CartHistory przechowuje historię zmian w koszyku zakupowym.
 \begin{itemize}
 \item \texttt{CartHistoryID} - Unikalny identyfikator historii koszyka.
@@ -2266,7 +2266,7 @@ RemovedAt musi być po AddedAt
 \end{Code}
 \end{itemize}
 \subsection{Exams}
-\label{sec:org7fd0ab0}
+\label{sec:org73c04f2}
 Tabela Exams przechowuje informacje o egzaminach.
 \begin{itemize}
 \item \texttt{ExamID} - Unikalny identyfikator egzaminu
@@ -2322,7 +2322,7 @@ Kod pocztowy ma być w poprawnym formacie
 \end{Code}
 \end{itemize}
 \subsection{Subjects}
-\label{sec:orgddc26d0}
+\label{sec:orgb69c5ae}
 Tabela Subjects przechowuje informacje na temat wszystkich przedmiotów podpiętych pod wszystkie kierunki studiów.
 \begin{itemize}
 \item \texttt{SubjectID} - Unikalny identyfikator przedmiotu
@@ -2350,7 +2350,7 @@ Tabela Subjects przechowuje informacje na temat wszystkich przedmiotów podpięt
 \end{Verbatim}
 \end{Code}
 \subsection{FieldsOfStudies}
-\label{sec:orge49df49}
+\label{sec:orgb95ebce}
 Tabela FieldsOfStudies przechowuje informacje o wszystkich dziedzinach oferowanych studiów.
 \begin{itemize}
 \item \texttt{FieldOfStudiesID} - Unikalny identyfikator dziedziny studiów.
@@ -2368,7 +2368,7 @@ Tabela FieldsOfStudies przechowuje informacje o wszystkich dziedzinach oferowany
 \end{Verbatim}
 \end{Code}
 \subsection{Users}
-\label{sec:org4228ef7}
+\label{sec:org8831d61}
 Tabela Users przechowuje podstawowe informacje o użytkownikach.
 \begin{itemize}
 \item \texttt{UserID} - Unikalny identyfikator użytkownika, stanowiący klucz główny tabeli.
@@ -2385,7 +2385,7 @@ Tabela Users przechowuje podstawowe informacje o użytkownikach.
 \end{Verbatim}
 \end{Code}
 \subsection{Employees}
-\label{sec:org80e05bf}
+\label{sec:org6a20298}
 Tabela Employees przechowuje informacje o pracownikach systemu.
 \begin{itemize}
 \item \texttt{EmployeeID} - Unikalny identyfikator pracownika, stanowiący klucz główny tabeli.
@@ -2406,7 +2406,7 @@ Tabela Employees przechowuje informacje o pracownikach systemu.
 \end{Verbatim}
 \end{Code}
 \subsection{DiplomasSent}
-\label{sec:org56613dc}
+\label{sec:orgbd87055}
 Tabela DiplomasSent przechowuje informacje o wysłanych dyplomach.
 \begin{itemize}
 \item \texttt{DiplomaSentID} - Unikalny identyfikator wysłanego dyplomu.
@@ -2434,9 +2434,9 @@ Tabela DiplomasSent przechowuje informacje o wysłanych dyplomach.
 \end{Verbatim}
 \end{Code}
 \section{Widoki}
-\label{sec:org6e84507}
+\label{sec:org995521c}
 \subsection{\texttt{ActivityConflicts}}
-\label{sec:orge1fb9e8}
+\label{sec:org469132f}
 Widok prezentujący konflikty terminów zajęć dla użytkowników
 \begin{Code}
 \begin{Verbatim}
@@ -2496,12 +2496,14 @@ Widok prezentujący konflikty terminów zajęć dla użytkowników
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{SchoolOffer}}
-\label{sec:orgd186820}
+\label{sec:orgd71e163}
 Widok prezentujący bieżącą ofertę edukacyjną (webinary, kursy, studia)
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{VIEW} \EFf{SchoolOffer} \EFk{AS}
-\EFk{SELECT} \EFs{'Webinar'} \EFk{as}\EFs{'ProductType'},
+\EFk{SELECT} 
+        W.WebinarID \EFk{as} \EFs{'ProductID'},
+       \EFs{'Webinar'} \EFk{as}\EFs{'ProductType'},
         W.WebinarName,
         W.Description,
         Price \EFk{as} \EFs{'TotalPrice'},
@@ -2510,18 +2512,19 @@ Widok prezentujący bieżącą ofertę edukacyjną (webinary, kursy, studia)
         EndDate
 \EFk{FROM} Webinars W 
 \EFk{JOIN} Products P \EFk{ON} W.WebinarID = P.ProductID \EFk{AND} P.ClosedAt \EFk{IS} \EFk{NULL}
-\EFk{WHERE} W.StartDate < GETDATE()
 \EFk{UNION}
-\EFk{SELECT} \EFs{'Course'}, C.CourseName, C.[Description], P.Price, P.AdvancePayment, C.StartDate, C.EndDate
+\EFk{SELECT} C.CourseID, \EFs{'Course'}, C.CourseName, C.[Description], P.Price, P.AdvancePayment, C.StartDate, C.EndDate
 \EFk{FROM} Courses C 
-\EFk{JOIN} Products P \EFk{ON} P.ProductID = C.CourseID \EFk{AND} P.ClosedAt \EFk{IS} \EFk{NULL}
+\EFk{JOIN} Products P \EFk{ON} P.ProductID = C.CourseID \EFk{AND} P.ClosedAt \EFk{IS} \EFk{NULL} \EFk{AND} C.StartDate > GETDATE()
 \EFk{UNION}
-\EFk{SELECT} \EFs{'Studies'}, S.\EFk{Name}, S.[Description], P.Price, P.AdvancePayment, S.StartDate, S.EndDate
+\EFk{SELECT} S.StudiesID, \EFs{'Studies'}, S.\EFk{Name}, S.[Description], P.Price, P.AdvancePayment, S.StartDate, S.EndDate
 \EFk{FROM} Studies S
 \EFk{JOIN} Products P \EFk{ON} P.ProductID = S.StudiesID \EFk{AND} P.ClosedAt \EFk{IS} \EFk{NULL}
-\EFk{WHERE} S.StartDate < GETDATE()
+\EFk{WHERE} S.StartDate > GETDATE()
 \EFk{UNION}
-\EFk{SELECT} \EFs{'Public Study Session'},
+\EFk{SELECT} 
+        PSS.PublicStudySessionID,
+       \EFs{'Public Study Session'},
        \EFs{'Sesja również dla osób z zewnątrz'} + S.[Description],
         S.[Description],
         P.Price, 
@@ -2532,11 +2535,11 @@ Widok prezentujący bieżącą ofertę edukacyjną (webinary, kursy, studia)
 \EFk{JOIN} Products P \EFk{ON} P.ProductID = PSS.PublicStudySessionID \EFk{AND} P.ClosedAt \EFk{IS} \EFk{NULL}
 \EFk{JOIN} StudiesSessions SS \EFk{ON} SS.StudiesSessionID = PSS.StudiesSessionID
 \EFk{JOIN} Subjects S \EFk{ON} S.SubjectID = SS.SubjectID
-\EFk{WHERE} SS.StartDate < GETDATE();
+\EFk{WHERE} SS.StartDate > GETDATE();
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{EmployeeTimeTable}}
-\label{sec:org273d37b}
+\label{sec:org04052be}
 Widok prezentujący harmonogram pracy pracowników
 \begin{Code}
 \begin{Verbatim}
@@ -2579,8 +2582,52 @@ Widok prezentujący harmonogram pracy pracowników
 \EFk{JOIN} EmployeeData ED \EFk{ON} ED.EmployeeID = SS.LecturerID;
 \end{Verbatim}
 \end{Code}
+\subsection{\texttt{EmployeeStatistics}}
+\label{sec:orgf8aa9eb}
+Widok prezentujący statystyki dotyczące aktywności pracowników
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{VIEW} \EFf{EmployeeStatistics} \EFk{AS}
+\EFk{SELECT} 
+    E.EmployeeID,
+    P.FirstName, 
+    P.LastName,
+    (
+        \EFk{SELECT} \EFb{COUNT}(*)
+        \EFk{FROM} Webinars W
+        \EFk{WHERE} W.LecturerID = E.EmployeeID
+    ) \EFk{as} \EFs{'WebinarsConducted'},
+    (
+        \EFk{SELECT} \EFb{COUNT}(*)
+        \EFk{FROM} Courses C
+        \EFk{WHERE} C.CoordinatorID = E.EmployeeID
+    ) \EFk{as} \EFs{'CoursesCoordinated'},
+    (
+        \EFk{SELECT} \EFb{COUNT}(*)
+        \EFk{FROM} Studies S 
+        \EFk{WHERE} S.CoordinatorID = E.EmployeeID
+    ) \EFk{as} \EFs{'StudiesCoordinated'},
+    (
+        \EFk{SELECT} \EFb{COUNT}(*)
+        \EFk{FROM} StudiesSessions SS
+        \EFk{WHERE} SS.LecturerID = E.EmployeeID \EFk{AND} SS.EndDate >  GETDATE()
+    ) \EFk{as} \EFs{'StudiesSessionsConducted'},
+    (
+        \EFk{SELECT} \EFb{COUNT}(COS.CourseOnlineSessionID) + \EFb{COUNT}(CSS.CourseStationarySessionID)
+        \EFk{FROM} CoursesSessions CS 
+        \EFk{LEFT} \EFk{JOIN} CourseOnlineSessions COS \EFk{ON}
+             COS.CourseOnlineSessionID = CS.CourseSessionID \EFk{AND} COS.StartDate < GETDATE()
+        \EFk{LEFT} \EFk{JOIN} CourseStationarySessions CSS \EFk{ON} 
+             CSS.CourseStationarySessionID = CS.CourseSessionID \EFk{AND} CSS.EndDate < GETDATE()
+        \EFk{WHERE} CS.LecturerID = E.EmployeeID
+    ) \EFk{as} \EFs{'CourseSessionsConducted'}
+
+\EFk{FROM} Employees E 
+\EFk{JOIN} People P \EFk{ON} P.PersonID = E.EmployeeID;
+\end{Verbatim}
+\end{Code}
 \subsection{\texttt{TotalIncomeForProducts}}
-\label{sec:orge2b9690}
+\label{sec:orgb2aebe0}
 Widok prezentujący łączne przychody z różnych produktów edukacyjnych
 \begin{Code}
 \begin{Verbatim}
@@ -2647,7 +2694,7 @@ Widok prezentujący łączne przychody z różnych produktów edukacyjnych
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{RevenueSummaryByProductType}}
-\label{sec:org6487149}
+\label{sec:org8cd939c}
 Widok prezentujący miesięczne i roczne podsumowanie przychodów według typów produktów
 \begin{Code}
 \begin{Verbatim}
@@ -2673,7 +2720,7 @@ Widok prezentujący miesięczne i roczne podsumowanie przychodów według typów
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{TimeTableForAllUsers}}
-\label{sec:orged2bf60}
+\label{sec:org4d1d39c}
 Widok prezentujący harmonogram zajęć dla wszystkich użytkowników
 \begin{Code}
 \begin{Verbatim}
@@ -2750,7 +2797,7 @@ Widok prezentujący harmonogram zajęć dla wszystkich użytkowników
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{Loaners}}
-\label{sec:orgf59b061}
+\label{sec:org337c1b5}
 Widok prezentujący listę dłużników
 \begin{Code}
 \begin{Verbatim}
@@ -2845,7 +2892,7 @@ Widok prezentujący listę dłużników
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AttendanceListForEachSession}}
-\label{sec:org3906379}
+\label{sec:org75b9494}
 Widok prezentujący frekwencje na zajęciach
 \begin{Code}
 \begin{Verbatim}
@@ -2934,12 +2981,12 @@ Widok prezentujący frekwencje na zajęciach
 \EFk{JOIN} People P \EFk{ON} SA.UserID = P.PersonID;
 \end{Verbatim}
 \end{Code}
-\subsection{\texttt{GeneralAttedance}}
-\label{sec:orgc4eec46}
+\subsection{\texttt{GeneralAttendance}}
+\label{sec:org1fcea07}
 Widok prezentujący ogólne statystyki frekwencji na zajęciach
 \begin{Code}
 \begin{Verbatim}
-\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{VIEW} \EFf{GeneralAttedance} \EFk{AS}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{VIEW} \EFf{GeneralAttendance} \EFk{AS}
 \EFk{WITH} StudiesSessionsInfo \EFk{AS} (
   \EFk{SELECT} 
     SS.StudiesSessionID, 
@@ -2997,7 +3044,7 @@ Widok prezentujący ogólne statystyki frekwencji na zajęciach
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{NumberOfPeopleRegisteredForEvents}}
-\label{sec:org5105363}
+\label{sec:org59ac0a0}
 Widok prezentujący liste osób zapisanych na przyszłe wydarzenia
 \begin{Code}
 \begin{Verbatim}
@@ -3071,9 +3118,9 @@ Widok prezentujący liste osób zapisanych na przyszłe wydarzenia
 \end{Verbatim}
 \end{Code}
 \section{Funkcje i procedury}
-\label{sec:orgcb904f4}
+\label{sec:org6bf45e6}
 \subsection{\texttt{dbo.GetRecordingAccessDays}}
-\label{sec:org1f95538}
+\label{sec:orgcc8cbe3}
 Funkcja pobierająca liczbę dni dostępu do nagrań webinarów.
 \begin{Code}
 \begin{Verbatim}
@@ -3107,7 +3154,7 @@ Funkcja pobierająca liczbę dni dostępu do nagrań webinarów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.GetMinAttendancePercentageForCourse}}
-\label{sec:orga74bb47}
+\label{sec:org66ed70b}
 Funkcja pobierająca minimalny procent obecności wymagany do zaliczenia kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -3141,7 +3188,7 @@ Funkcja pobierająca minimalny procent obecności wymagany do zaliczenia kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.GetMinAttendancePercentageForInternship}}
-\label{sec:org6ebd615}
+\label{sec:orge368c29}
 Funkcja pobierająca minimalny procent obecności wymagany do zaliczenia stażu.
 \begin{Code}
 \begin{Verbatim}
@@ -3175,7 +3222,7 @@ Funkcja pobierająca minimalny procent obecności wymagany do zaliczenia stażu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.GetMinAttendancePercentageForStudies}}
-\label{sec:orgbf76791}
+\label{sec:org07df3a4}
 Funkcja pobierająca minimalny procent obecności wymagany do zaliczenia studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3209,7 +3256,7 @@ Funkcja pobierająca minimalny procent obecności wymagany do zaliczenia studió
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.GetMaxDaysForPaymentBeforeCourseStart}}
-\label{sec:orged8da0f}
+\label{sec:orgbf48605}
 Funkcja pobierająca maksymalną liczbę dni na dokonanie płatności przed rozpoczęciem kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -3243,7 +3290,7 @@ Funkcja pobierająca maksymalną liczbę dni na dokonanie płatności przed rozp
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.GetMaxDaysForPaymentBeforeStudiesStart}}
-\label{sec:orge50404c}
+\label{sec:orge8d6d28}
 Funkcja pobierająca maksymalną liczbę dni na dokonanie płatności przed rozpoczęciem studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3277,7 +3324,7 @@ Funkcja pobierająca maksymalną liczbę dni na dokonanie płatności przed rozp
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.GetDaysInInternship}}
-\label{sec:org389c211}
+\label{sec:org32953c6}
 Funkcja pobierająca liczbę dni trwania stażu.
 \begin{Code}
 \begin{Verbatim}
@@ -3311,7 +3358,7 @@ Funkcja pobierająca liczbę dni trwania stażu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CreateSemesterOfStudies}}
-\label{sec:orga098d7e}
+\label{sec:org428e6e7}
 Procedura do tworzenia semestru studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3344,7 +3391,7 @@ Procedura do tworzenia semestru studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteSession}}
-\label{sec:orga9d7d9d}
+\label{sec:org65f3fb0}
 Procedura do usuwania sesji.
 \begin{Code}
 \begin{Verbatim}
@@ -3372,7 +3419,7 @@ Procedura do usuwania sesji.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CheckIfUserCompletedProduct}}
-\label{sec:orgd566e4a}
+\label{sec:org90e7c23}
 Funkcja sprawdzająca, czy użytkownik ukończył dany produkt (kurs, webinar, etc.).
 \begin{Code}
 \begin{Verbatim}
@@ -3420,7 +3467,7 @@ IF \EFk{EXISTS}(
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{InsertMadeUpAttendance}}
-\label{sec:org9bb6fcb}
+\label{sec:orgf7a264b}
 Procedura do dodawania udziału w zajęciach zamiennych.
 \begin{Code}
 \begin{Verbatim}
@@ -3465,7 +3512,7 @@ Students \EFk{WHERE} Students.StudentID = @StudentID;
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddOrModifyPublicStudySessionAttendance}}
-\label{sec:orga341dd2}
+\label{sec:org3562463}
 Procedura do dodawania lub modyfikacji obecności na pojedynczym spotkaniu studyjnym
 \begin{Code}
 \begin{Verbatim}
@@ -3500,7 +3547,7 @@ Procedura do dodawania lub modyfikacji obecności na pojedynczym spotkaniu study
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeletePublicStudySessionAttendance}}
-\label{sec:org35c10b0}
+\label{sec:org7699a8c}
 Procedura do usuwania obecności na pojedynczym spotkaniu studyjnym
 \begin{Code}
 \begin{Verbatim}
@@ -3528,7 +3575,7 @@ Procedura do usuwania obecności na pojedynczym spotkaniu studyjnym
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddFieldOfStudy}}
-\label{sec:orgd12cf52}
+\label{sec:orgdefd561}
 Procedura do dodawania nowego kierunku studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3548,7 +3595,7 @@ Procedura do dodawania nowego kierunku studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteFieldOfStudies}}
-\label{sec:org43654b2}
+\label{sec:orgf003b53}
 Procedura do usuwania kierunku studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3577,7 +3624,7 @@ IF \EFk{NOT} \EFk{EXISTS} (\EFk{SELECT} \EFhn{1} \EFk{FROM} Studies \EFk{WHERE} 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyStudies}}
-\label{sec:orgbb238e7}
+\label{sec:orgab48394}
 Procedura do modyfikacji danych studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3612,7 +3659,7 @@ Procedura do modyfikacji danych studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CreateSubject}}
-\label{sec:org7d3bd78}
+\label{sec:orgc820595}
 Procedura do tworzenia przedmiotu.
 \begin{Code}
 \begin{Verbatim}
@@ -3631,7 +3678,7 @@ Procedura do tworzenia przedmiotu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifySubject}}
-\label{sec:orga27cadb}
+\label{sec:org922bd80}
 Procedura do modyfikacji przedmiotu.
 \begin{Code}
 \begin{Verbatim}
@@ -3656,7 +3703,7 @@ Procedura do modyfikacji przedmiotu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyStudySession}}
-\label{sec:org7e13892}
+\label{sec:org92a835f}
 Procedura do modyfikacji sesji studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3686,7 +3733,7 @@ Procedura do modyfikacji sesji studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CreateStationaryStudySession}}
-\label{sec:org4693f24}
+\label{sec:orge072a81}
 Procedura do dodawania sesji stacjonarnych studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3721,7 +3768,7 @@ Procedura do dodawania sesji stacjonarnych studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyStationaryStudySession}}
-\label{sec:org6a8fd50}
+\label{sec:org73f47eb}
 Procedura do modyfikacji sesji stacjonarnych studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3758,7 +3805,7 @@ Procedura do modyfikacji sesji stacjonarnych studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddOnlineStudySession}}
-\label{sec:org1ff6080}
+\label{sec:org6e8f44b}
 Procedura do dodawania sesji online studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3790,7 +3837,7 @@ Procedura do dodawania sesji online studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyOnlineStudySession}}
-\label{sec:orgb7eafbd}
+\label{sec:org963f03f}
 Procedura do modyfikacji sesji online studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -3833,7 +3880,7 @@ Procedura do modyfikacji sesji online studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddExam}}
-\label{sec:orgd8c8524}
+\label{sec:org3105035}
 Procedura do dodawania egzaminu.
 \begin{Code}
 \begin{Verbatim}
@@ -3854,7 +3901,7 @@ Procedura do dodawania egzaminu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyExam}}
-\label{sec:org0d14334}
+\label{sec:orgbc0a6e4}
 Procedura do modyfikacji egzaminu.
 \begin{Code}
 \begin{Verbatim}
@@ -3883,7 +3930,7 @@ Procedura do modyfikacji egzaminu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{UpdateExamGrade}}
-\label{sec:orgef158df}
+\label{sec:orgbc1ab5c}
 Procedura do aktualizacji oceny z egzaminu.
 \begin{Code}
 \begin{Verbatim}
@@ -3909,7 +3956,7 @@ Procedura do aktualizacji oceny z egzaminu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteExamGrade}}
-\label{sec:orgf63e7ed}
+\label{sec:org3f77a20}
 Procedura do usuwania oceny z egzaminu.
 \begin{Code}
 \begin{Verbatim}
@@ -3924,7 +3971,7 @@ Procedura do usuwania oceny z egzaminu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddInternship}}
-\label{sec:org0178fd2}
+\label{sec:orgd417923}
 Procedura do dodawania stażu.
 \begin{Code}
 \begin{Verbatim}
@@ -3944,7 +3991,7 @@ Procedura do dodawania stażu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyInternship}}
-\label{sec:orgeab7100}
+\label{sec:orge528db6}
 Procedura do modyfikacji danych stażu.
 \begin{Code}
 \begin{Verbatim}
@@ -3967,7 +4014,7 @@ Procedura do modyfikacji danych stażu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{UpdateInternshipDetail}}
-\label{sec:org425ab05}
+\label{sec:orgce3040d}
 Procedura do aktualizacji szczegółów stażu dla danego studenta.
 \begin{Code}
 \begin{Verbatim}
@@ -4007,7 +4054,7 @@ Procedura do aktualizacji szczegółów stażu dla danego studenta.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteInternshipDetail}}
-\label{sec:org3c06cf3}
+\label{sec:org805f6c8}
 Procedura do usuwania szczegółów stażu.
 \begin{Code}
 \begin{Verbatim}
@@ -4023,117 +4070,185 @@ Procedura do usuwania szczegółów stażu.
 \EFk{GO}
 \end{Verbatim}
 \end{Code}
-\subsection{\texttt{CloseStudies}}
-\label{sec:org462857a}
-Procedura do zamykania semestru studiów.
+\subsection{\texttt{getStudiesAttendance}}
+\label{sec:orgf965cc2}
+Funkcja zwracająca szczegółową listę obecności dla danego semestru studiów.
 \begin{Code}
 \begin{Verbatim}
-\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{CloseStudies}(
-@StudiesID \EFt{INT}
-)
-\EFk{AS} \EFk{BEGIN}
-IF \EFk{EXISTS}( \EFk{SELECT} * \EFk{FROM} Products \EFk{WHERE} ProductID = @StudiesID)
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{FUNCTION} \EFf{getStudiesAttendance}(@StudiesID \EFt{INT})
+\EFk{RETURNS} \EFk{TABLE}
+\EFk{AS}
+\EFk{RETURN} (
+    \EFk{SELECT} 
+        s.StudentID, 
+        s.UserID, 
+        p.FirstName, 
+        p.LastName, 
+        sub.SubjectID, 
+        sub.SubjectName, 
+        ss.StudiesSessionID \EFk{AS} SessionID,
+        \EFk{CASE}
+            \EFk{WHEN} sss.StationaryStudiesSessionID \EFk{IS} \EFk{NOT} \EFk{NULL} \EFk{THEN} \EFs{'Stationary'}
+            \EFk{WHEN} oss.OnlineStudiesSessionID \EFk{IS} \EFk{NOT} \EFk{NULL} \EFk{THEN} \EFs{'Online'}
+            \EFk{ELSE} \EFs{'Unknown'}
+        \EFk{END} \EFk{AS} SessionType,
+        ss.StartDate, 
+        ss.EndDate, 
+        ssa.Completed
+    \EFk{FROM} 
+        StudiesSessions ss
+    \EFk{INNER} \EFk{JOIN} 
+        StudiesSessionsAttendence ssa \EFk{ON} ss.StudiesSessionID = ssa.SessionID
+    \EFk{INNER} \EFk{JOIN} 
+        Students s \EFk{ON} ssa.StudentID = s.StudentID
+    \EFk{INNER} \EFk{JOIN} 
+        People p \EFk{ON} s.UserID = p.PersonID
+    \EFk{INNER} \EFk{JOIN} 
+        Subjects sub \EFk{ON} ss.SubjectID = sub.SubjectID
+    \EFk{LEFT} \EFk{JOIN} 
+        StationaryStudiesSessions sss \EFk{ON} ss.StudiesSessionID = sss.StationaryStudiesSessionID
+    \EFk{LEFT} \EFk{JOIN} 
+        OnlineStudiesSessions oss \EFk{ON} ss.StudiesSessionID = oss.OnlineStudiesSessionID
+    \EFk{WHERE} 
+        sub.StudiesID = @StudiesID
+);
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{CloseStudies}}
+\label{sec:org1f1b217}
+Procedura do zamykania semestru studiów. Sprawdza czy dany student zdał egzaminy, zaliczył staże, ma odpowiednią obecność i jeżeli tak to wpisuje zaliczenie semestru studiów.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{CloseStudies}(@StudiesID \EFt{INT})
+\EFk{AS}
 \EFk{BEGIN}
-    \EFk{UPDATE} Products
-    \EFk{SET} ClosedAt = GETDATE()
-    \EFk{WHERE} ProductID = @StudiesID
+    \EFk{BEGIN} TRY
+        \EFk{BEGIN} \EFk{TRANSACTION}
 
-    \EFk{DECLARE} @ExpectedSessionAttendancePercentage \EFt{DECIMAL}
-    \EFk{SET} @ExpectedSessionAttendancePercentage = dbo.GetMinAttendancePercentageForStudies(@StudiesID);
+        \EFcd{--} \EFc{Declare variables}
+        \EFk{DECLARE} @MinAttendancePercentage \EFt{DECIMAL}(\EFhn{6},\EFhn{4});
 
-    \EFk{DECLARE} @StudentCursor \EFk{CURSOR};
-    \EFk{SET} @StudentCursor = \EFk{CURSOR} \EFk{FOR}
-        \EFk{SELECT} StudentID \EFk{FROM} Students \EFk{WHERE} StudiesID = @StudiesID
+        \EFcd{--} \EFc{Get minimum attendance percentage for the studies from the function}
+        \EFk{SELECT} @MinAttendancePercentage = dbo.GetMinAttendancePercentageForStudies(@StudiesID);
 
-    \EFk{DECLARE} @StudentID \EFt{INT};
+        \EFcd{--} \EFc{Temporary table to store students' data}
+        \EFk{CREATE} \EFk{TABLE} \#StudentData (
+            StudentID \EFt{INT},
+            SubjectID \EFt{INT},
+            TotalSessions \EFt{INT},
+            AttendedSessions \EFt{INT},
+            MadeUpSessions \EFt{INT},
+            EffectiveAttendance \EFt{DECIMAL}(\EFhn{6},\EFhn{4}),
+            HasPassed \EFt{BIT},
+            InternshipCompleted \EFt{BIT},
+            ExamsPassed \EFt{BIT}
+        );
 
-    \EFk{OPEN} @StudentCursor;
-        \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @StudentCursor \EFk{INTO} @StudentID;
-        WHILE @@FETCH\_STATUS = \EFhn{0}
-            \EFk{BEGIN}
-                \EFk{DECLARE} @CompletedInternship \EFt{BIT};
-                \EFk{SET} @CompletedInternship = (
-                    \EFk{SELECT} Completed \EFk{FROM} InternshipDetails
-                    \EFk{JOIN} Internships \EFk{ON} InternshipDetails.IntershipID = Internships.InternshipID
-                    \EFk{WHERE} StudiesID = @StudiesID \EFk{AND} StudentID = @StudentID
-                    )
+        \EFcd{--} \EFc{Populate the temporary table with initial data}
+        \EFk{INSERT} \EFk{INTO} \#StudentData (StudentID, SubjectID, TotalSessions, AttendedSessions, MadeUpSessions, EffectiveAttendance, HasPassed)
+        \EFk{SELECT} 
+            s.StudentID,
+            ss.SubjectID,
+            (\EFk{SELECT} \EFb{COUNT}(*) \EFk{FROM} StudiesSessions ss2 \EFk{WHERE} ss2.SubjectID = ss.SubjectID) \EFk{AS} TotalSessions,
+            \EFb{SUM}(\EFk{CASE} \EFk{WHEN} ssa.Completed = \EFhn{1} \EFk{THEN} \EFhn{1} \EFk{ELSE} \EFhn{0} \EFk{END}) \EFk{AS} AttendedSessions,
+            \EFhn{0} \EFk{AS} MadeUpSessions, \EFcd{--} \EFc{Initial value, will be updated later}
+            \EFhn{0.0} \EFk{AS} EffectiveAttendance, \EFcd{--} \EFc{Initial value, will be updated later}
+            \EFhn{0} \EFk{AS} HasPassed \EFcd{--} \EFc{Initial value, will be updated later}
+        \EFk{FROM} Students s
+        \EFk{LEFT} \EFk{JOIN} StudiesSessionsAttendence ssa \EFk{ON} s.StudentID = ssa.StudentID
+        \EFk{LEFT} \EFk{JOIN} StudiesSessions ss \EFk{ON} ssa.SessionID = ss.StudiesSessionID
+        \EFk{WHERE} s.StudiesID = @StudiesID
+        \EFk{GROUP} \EFk{BY} s.StudentID, ss.SubjectID;
 
-                \EFk{DECLARE} @PassedAllExams \EFt{BIT};
-                \EFk{SET} @PassedAllExams = \EFhn{1};
 
-                \EFk{DECLARE} @ExamsCursor \EFk{CURSOR};
-                \EFk{SET} @ExamsCursor = \EFk{CURSOR} \EFk{FOR} (
-                    \EFk{SELECT} FinalGrade \EFk{FROM} Subjects
-                    \EFk{JOIN} Exams
-                    \EFk{ON} Subjects.SubjectID = Exams.SubjectID
-                    \EFk{JOIN} ExamsGrades
-                    \EFk{ON} Exams.ExamID = ExamsGrades.ExamID
-                    \EFk{WHERE} StudiesID = @StudiesID \EFk{AND} StudentID = @StudentID
-                    )
+        \EFcd{--} \EFc{Update the table with made up sessions}
+        \EFk{UPDATE} \#StudentData
+        \EFk{SET} MadeUpSessions = (
+            \EFk{SELECT} \EFb{SUM}(smup.AttendanceValue)
+            \EFk{FROM} MadeUpAttendance mup
+            \EFk{JOIN} SubjectMakeUpPossibilities smup \EFk{ON} mup.SubjectID = smup.SubjectID \EFk{AND} mup.ProductID = smup.ProductID
+            \EFk{WHERE} mup.StudentID = \#StudentData.StudentID \EFk{AND} mup.SubjectID = \#StudentData.SubjectID
+        );
 
-                \EFk{DECLARE} @Grade \EFt{DECIMAL};
+        \EFcd{--} \EFc{Calculate effective attendance for each student in each subject}
+        \EFk{UPDATE} \#StudentData
+        \EFk{SET} EffectiveAttendance = (\EFb{CAST}(AttendedSessions \EFk{AS} \EFt{DECIMAL}) + \EFb{CAST}(MadeUpSessions \EFk{AS} \EFt{DECIMAL})) / \EFb{CAST}(TotalSessions \EFk{AS} \EFt{DECIMAL});
 
-                \EFk{OPEN} @ExamsCursor;
-                    \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @ExamsCursor \EFk{INTO} @Grade;
-                        WHILE @@FETCH\_STATUS = \EFhn{0}
-                            \EFk{BEGIN}
-                                IF @Grade = \EFhn{2.0}
-                                    \EFk{BEGIN}
-                                        \EFk{SET} @PassedAllExams = \EFhn{0};
-                                    \EFk{end}
-                                \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @ExamsCursor \EFk{INTO} @Grade;
-                            \EFk{end}
+        \EFcd{--} \EFc{Determine if the student has passed based on the effective attendance and minimum required attendance}
+        \EFk{UPDATE} \#StudentData
+        \EFk{SET} HasPassed = \EFk{CASE} \EFk{WHEN} EffectiveAttendance >= @MinAttendancePercentage \EFk{THEN} \EFhn{1} \EFk{ELSE} \EFhn{0} \EFk{END};
 
-                \EFk{DECLARE} @CompletedAllSessions \EFt{BIT};
-                \EFk{SET} @CompletedAllSessions = \EFhn{1};
+        \EFcd{--} \EFc{Check if each student has completed all internships}
+        \EFk{UPDATE} \#StudentData
+        \EFk{SET} InternshipCompleted = \EFk{CASE} 
+            \EFk{WHEN} \EFk{EXISTS} (
+                \EFk{SELECT} \EFhn{1}
+                \EFk{FROM} InternshipDetails id
+                \EFk{JOIN} Internships i \EFk{ON} id.IntershipID = i.InternshipID
+                \EFk{WHERE} id.StudentID = \#StudentData.StudentID \EFk{AND} i.StudiesID = @StudiesID \EFk{AND} id.Completed = \EFhn{1}
+                \EFk{GROUP} \EFk{BY} id.StudentID
+                \EFk{HAVING} \EFb{COUNT}(id.IntershipID) = (\EFk{SELECT} \EFb{COUNT}(InternshipID) \EFk{FROM} Internships \EFk{WHERE} StudiesID = @StudiesID)
+            ) \EFk{THEN} \EFhn{1}
+            \EFk{ELSE} \EFhn{0}
+        \EFk{END};
 
-                \EFk{DECLARE} @SessionsCursor \EFk{CURSOR};
-                \EFk{SET} @SessionsCursor = \EFk{CURSOR} \EFk{FOR} (
-                    \EFk{SELECT} Subjects.SubjectID, \EFb{COUNT}(SessionID) \EFk{AS} AllSessions, \EFb{SUM}(IIF(Completed=\EFhn{1}, \EFhn{1}, \EFk{Null})) \EFk{As} CompletedSessions \EFk{FROM} StudiesSessionsAttendence
-                    \EFk{JOIN} StudiesSessions \EFk{ON} StudiesSessionsAttendence.SessionID = StudiesSessions.StudiesSessionID
-                    \EFk{JOIN} Subjects \EFk{ON} StudiesSessions.SubjectID = Subjects.SubjectID
-                    \EFk{WHERE} StudentID = @StudentID \EFk{AND} StudiesID = @StudiesID
-                    \EFk{GROUP} \EFk{BY} Subjects.SubjectID
-                )
+        \EFcd{--} \EFc{Check if each student has passed all exams with a grade >= 3.0}
+        \EFk{UPDATE} \#StudentData
+        \EFk{SET} ExamsPassed = \EFk{CASE} 
+            \EFk{WHEN} \EFk{NOT} \EFk{EXISTS} (
+                \EFk{SELECT} \EFhn{1}
+                \EFk{FROM} ExamsGrades eg
+                \EFk{JOIN} Exams e \EFk{ON} eg.ExamID = e.ExamID
+                \EFk{JOIN} Subjects sub \EFk{ON} e.SubjectID = sub.SubjectID
+                \EFk{WHERE} eg.StudentID = \#StudentData.StudentID \EFk{AND} sub.StudiesID = @StudiesID \EFk{AND} eg.FinalGrade < \EFhn{3.0}
+            ) \EFk{THEN} \EFhn{1}
+            \EFk{ELSE} \EFhn{0}
+        \EFk{END};
 
-                \EFk{DECLARE} @SubjectID \EFt{INT};
-                \EFk{DECLARE} @AllSessions \EFt{INT};
-                \EFk{DECLARE} @CompletedSessions \EFt{INT};
+        \EFcd{--} \EFc{Update the Students table to set Completed = 1 for those who passed everything}
+        \EFk{UPDATE} s
+        \EFk{SET} s.Completed = \EFhn{1}
+        \EFk{FROM} Students s
+        \EFk{JOIN} \#StudentData sd \EFk{ON} s.StudentID = sd.StudentID
+        \EFk{WHERE} sd.HasPassed = \EFhn{1} \EFk{AND} sd.InternshipCompleted = \EFhn{1} \EFk{AND} sd.ExamsPassed = \EFhn{1} \EFk{AND} s.StudiesID = @StudiesID;
 
-                \EFk{DECLARE} @CompletedSessionsPercentage \EFt{DECIMAL};
+        \EFcd{--} \EFc{Final output of the procedure: StudentID, SubjectID, HasPassed, InternshipCompleted, ExamsPassed}
+        \EFk{SELECT} * \EFk{FROM} \#StudentData;
 
-                \EFk{OPEN} @SessionsCursor;
-                    \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @SessionsCursor \EFk{INTO} @SubjectID, @AllSessions, @CompletedSessions;
-                        WHILE @@FETCH\_STATUS = \EFhn{0}
-                            \EFk{BEGIN}
-                                \EFk{SET} @CompletedSessionsPercentage = @CompletedSessions / @AllSessions;
-                                IF @CompletedSessionsPercentage < @ExpectedSessionAttendancePercentage
-                                    \EFk{BEGIN}
-                                        \EFk{SET} @CompletedAllSessions = \EFhn{0};
-                                    \EFk{end}
-                                \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @SessionsCursor \EFk{INTO} @SubjectID, @AllSessions, @CompletedSessions;
-                            \EFk{end}
+        \EFcd{--} \EFc{Clean up temporary table}
+        \EFk{DROP} \EFk{TABLE} \#StudentData;
 
-                IF @CompletedInternship = \EFhn{1} \EFk{AND} @PassedAllExams = \EFhn{1} \EFk{AND} @CompletedAllSessions = \EFhn{1}
-                    \EFk{BEGIN}
-                        \EFk{UPDATE} Students
-                        \EFk{SET} Completed = \EFhn{1}
-                        \EFk{WHERE} StudentID = @StudentID \EFk{AND} StudiesID = @StudiesID
-                    \EFk{end}
-
-                \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @StudentCursor \EFk{INTO} @StudentID;
-            \EFk{end}
-\EFk{end}
-\EFk{ELSE}
+        \EFk{COMMIT} \EFk{TRANSACTION}
+    \EFk{END} TRY
+    \EFk{BEGIN} CATCH
+        \EFcd{--} \EFc{Error handling and rollback}
+        \EFk{ROLLBACK} \EFk{TRANSACTION};
+        THROW;
+    \EFk{END} CATCH
+\EFk{END};
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{ModifyOnlineStudiesSessionRecording}}
+\label{sec:org920c53f}
+Procedura do modyfikacji nagarania ze studyjnego spotkania online.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{ModifyOnlineStudiesSessionRecording}
+    @OnlineStudiesSessionID \EFt{INT},
+    @NewRecordingLink NVARCHAR(\EFb{MAX})
+\EFk{AS}
 \EFk{BEGIN}
-    print \EFs{'Studies do not exist.'}
-\EFk{end}
-\EFk{end};
+    \EFk{UPDATE} OnlineStudiesSessions
+    \EFk{SET} RecordingLink = @NewRecordingLink
+    \EFk{WHERE} OnlineStudiesSessionID = @OnlineStudiesSessionID;
+\EFk{END};
 \EFk{GO}
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CreateCourse}}
-\label{sec:orgac1c358}
+\label{sec:orgf9f3836}
 Procedura tworząca kurs.
 \begin{Code}
 \begin{Verbatim}
@@ -4168,7 +4283,7 @@ Procedura tworząca kurs.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyCourse}}
-\label{sec:org0e92362}
+\label{sec:org9e1c76d}
 Procedura modyfikująca kurs.
 \begin{Code}
 \begin{Verbatim}
@@ -4201,7 +4316,7 @@ Procedura modyfikująca kurs.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CreateModule}}
-\label{sec:orgc93f1f6}
+\label{sec:org44ffb77}
 Procedura tworząca moduł kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4222,7 +4337,7 @@ Procedura tworząca moduł kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyModule}}
-\label{sec:org8d5d874}
+\label{sec:orgb0cd740}
 Procedura modyfikująca moduł kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4245,7 +4360,7 @@ Procedura modyfikująca moduł kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteModule}}
-\label{sec:orgcbb3beb}
+\label{sec:org2b108af}
 Procedura usuwająca moduł kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4264,7 +4379,7 @@ Procedura usuwająca moduł kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyOnlineCourseSession}}
-\label{sec:org6f3102c}
+\label{sec:org5f38ba7}
 Procedura modyfikująca sesję online kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4302,7 +4417,7 @@ Procedura modyfikująca sesję online kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyOfflineCourseSession}}
-\label{sec:org3c19bc6}
+\label{sec:org18b715a}
 Procedura modyfikująca sesję offline kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4336,7 +4451,7 @@ Procedura modyfikująca sesję offline kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyStationaryCourseSession}}
-\label{sec:orgf1eb5fd}
+\label{sec:orgec4dad6}
 Procedura modyfikująca stacjonarną sesję kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4382,7 +4497,7 @@ Procedura modyfikująca stacjonarną sesję kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteCourseSession}}
-\label{sec:org07e39e5}
+\label{sec:org0b4cf79}
 Procedura usuwająca sesję kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4400,7 +4515,7 @@ Procedura usuwająca sesję kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{UpdateAttendance}}
-\label{sec:org384cc63}
+\label{sec:orgeab6e92}
 Procedura aktualizująca obecność na kursie.
 \begin{Code}
 \begin{Verbatim}
@@ -4430,7 +4545,7 @@ Procedura aktualizująca obecność na kursie.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteAttendance}}
-\label{sec:org9bca09a}
+\label{sec:org62a0b06}
 Procedura usuwająca obecność na kursie.
 \begin{Code}
 \begin{Verbatim}
@@ -4449,7 +4564,7 @@ Procedura usuwająca obecność na kursie.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{PlayOfflineSessionRecording}}
-\label{sec:org2403a27}
+\label{sec:orgf876627}
 Procedura odtwarzająca nagranie sesji offline.
 \begin{Code}
 \begin{Verbatim}
@@ -4477,7 +4592,7 @@ Procedura odtwarzająca nagranie sesji offline.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{GetOnlineSessionRecordingLink}}
-\label{sec:org114f403}
+\label{sec:orge371942}
 Funkcja pobierająca link do nagrania sesji online.
 \begin{Code}
 \begin{Verbatim}
@@ -4502,7 +4617,7 @@ Funkcja pobierająca link do nagrania sesji online.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{UpdateCourseSessionAttendance}}
-\label{sec:orgef9bb61}
+\label{sec:org0b7900b}
 Procedura aktualizująca obecność na sesji kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -4530,8 +4645,8 @@ Procedura aktualizująca obecność na sesji kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteCourseSessionAttendance}}
-\label{sec:org08f4829}
-
+\label{sec:org2ae1983}
+Usuń wpis do listy obecności.
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{DeleteCourseSessionAttendance}
@@ -4547,62 +4662,92 @@ Procedura aktualizująca obecność na sesji kursu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CloseCourse}}
-\label{sec:orgb8e8734}
-Procedura zamkykająca kurs.
+\label{sec:org36028c0}
+Procedura zamykająca kurs. Sprawdza ona na podstawie obecności kto zaliczył kurs i wpisuje zaliczenie.
 \begin{Code}
 \begin{Verbatim}
-\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{CloseCourse}(
-    @CourseID \EFt{INT}
-)
-\EFk{AS} \EFk{BEGIN}
-    IF \EFk{EXISTS}( \EFk{SELECT} * \EFk{FROM} Products \EFk{WHERE} ProductID = @CourseID)
-    \EFk{BEGIN}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{CloseCourse}(@CourseID \EFt{INT})
+\EFk{AS}
+\EFk{BEGIN}
+    \EFcd{--} \EFc{Start the transaction}
+    \EFk{BEGIN} \EFk{TRANSACTION}
+
+    \EFk{BEGIN} TRY
+        \EFcd{--} \EFc{Update the ClosedAt date for the course in Products table}
         \EFk{UPDATE} Products
         \EFk{SET} ClosedAt = GETDATE()
-        \EFk{WHERE} ProductID = @CourseID
+        \EFk{FROM} Products
+        \EFk{INNER} \EFk{JOIN} Courses \EFk{ON} Products.ProductID = Courses.CourseID
+        \EFk{WHERE} Courses.CourseID = @CourseID
 
-        \EFk{DECLARE} @ExpectedAttendancePercentage \EFt{DECIMAL}
-        \EFk{SET} @ExpectedAttendancePercentage = (\EFk{SELECT} AttendancePercentage \EFk{FROM} MinAttendancePercentageToPassCourse \EFk{WHERE} CourseID = @CourseID);
+        \EFcd{--} \EFc{Get the minimum attendance percentage for the course}
+        \EFk{DECLARE} @MinAttendancePercentage \EFt{DECIMAL}(\EFhn{6}, \EFhn{4})
+        \EFk{SELECT} @MinAttendancePercentage = dbo.GetMinAttendancePercentageForCourse(@CourseID)
 
-        \EFk{DECLARE} @AttendanceCursor \EFk{CURSOR};
-        \EFk{SET} @AttendanceCursor = \EFk{CURSOR} \EFk{FOR}
-            \EFk{SELECT} CourseParticipantID, \EFb{Count}(CourseSessionID) \EFk{as} AllSessions, \EFb{SUM}(IIF(Completed=\EFhn{1}, \EFhn{1}, \EFk{Null})) \EFk{AS} CompletedSessions
-            \EFk{FROM} CourseSessionsAttendance
-            \EFk{JOIN} Modules
-            \EFk{ON} CourseSessionsAttendance.CourseSessionID = ModuleID
-            \EFk{WHERE} CourseID = @CourseID
-            \EFk{GROUP} \EFk{BY} CourseParticipantID, CourseID;
+        \EFcd{--} \EFc{Temporary table to store module attendance for each participant}
+        \EFk{DECLARE} @ModuleAttendanceStats \EFk{TABLE} (CourseParticipantID \EFt{INT}, ModuleID \EFt{INT}, AllSessionsCompleted \EFt{BIT})
 
-        \EFk{DECLARE} @ParticipantID \EFt{INT};
-        \EFk{DECLARE} @AllSessions \EFt{INT};
-        \EFk{DECLARE} @CompletedSessions \EFt{INT};
-        \EFk{DECLARE} @ParticipantAttendancePercentage \EFt{DECIMAL};
+        \EFcd{--} \EFc{Insert module attendance stats for each participant}
+        \EFk{INSERT} \EFk{INTO} @ModuleAttendanceStats (CourseParticipantID, ModuleID, AllSessionsCompleted)
+        \EFk{SELECT} 
+            cp.CourseParticipantID,
+            cs.ModuleID,
+            \EFk{CASE} \EFk{WHEN} \EFb{COUNT}(csa.CourseSessionID) = \EFb{SUM}(\EFk{CASE} \EFk{WHEN} csa.Completed = \EFhn{1} \EFk{THEN} \EFhn{1} \EFk{ELSE} \EFhn{0} \EFk{END}) \EFk{THEN} \EFhn{1} \EFk{ELSE} \EFhn{0} \EFk{END}
+        \EFk{FROM} 
+            CourseParticipants cp
+    \EFk{INNER} \EFk{JOIN} 
+            CourseSessionsAttendance csa \EFk{ON} cp.CourseParticipantID = csa.CourseParticipantID
+    \EFk{INNER} \EFk{JOIN} 
+            CoursesSessions cs \EFk{ON} cs.CourseSessionID = csa.CourseSessionID
+        \EFk{WHERE} 
+            cp.CourseID = @CourseID
+        \EFk{GROUP} \EFk{BY} 
+            cp.CourseParticipantID, cs.ModuleID
 
+        \EFcd{--} \EFc{Update the CourseParticipants table for those who have completed the course}
+        \EFk{UPDATE} cp
+        \EFk{SET} Completed = \EFhn{1}
+        \EFk{FROM} CourseParticipants cp
+        \EFk{WHERE} cp.CourseID = @CourseID
+        \EFk{AND} 
+        (
+            \EFk{SELECT} \EFb{CAST}(\EFb{CAST}(\EFb{SUM}(\EFb{CAST}(mat.AllSessionsCompleted \EFk{AS} \EFt{INT})) \EFk{AS} \EFt{DECIMAL}) / \EFb{NULLIF}(\EFb{COUNT}(mat.ModuleID), \EFhn{0}) \EFk{AS} \EFt{DECIMAL}(\EFhn{5}, \EFhn{2}))
+            \EFk{FROM} @ModuleAttendanceStats mat
+            \EFk{WHERE} mat.CourseParticipantID = cp.CourseParticipantID
+        ) >= @MinAttendancePercentage
 
-        \EFk{OPEN} @AttendanceCursor;
-            \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @AttendanceCursor \EFk{INTO} @ParticipantID, @AllSessions, @CompletedSessions;
-            WHILE @@FETCH\_STATUS = \EFhn{0}
-                \EFk{BEGIN}
-                    \EFk{SET} @ParticipantAttendancePercentage = @CompletedSessions / @AllSessions;
-                    IF @ParticipantAttendancePercentage >= @ExpectedAttendancePercentage
-                    \EFk{BEGIN}
-                        \EFk{UPDATE} CourseParticipants
-                        \EFk{SET} Completed = \EFhn{1}
-                        \EFk{WHERE} CourseParticipantID = @ParticipantID \EFk{AND} CourseID = @CourseID
-                    \EFk{end}
-                    \EFk{FETCH} \EFk{NEXT} \EFk{FROM} @AttendanceCursor \EFk{INTO} @ParticipantID, @AllSessions, @CompletedSessions;
-                \EFk{end}
-    \EFk{end}
-    \EFk{ELSE}
-    \EFk{BEGIN}
-        print \EFs{'Course does not exist.'}
-    \EFk{end}
-\EFk{end};
+        \EFcd{--} \EFc{Commit the transaction}
+        \EFk{COMMIT}
+    \EFk{END} TRY
+    \EFk{BEGIN} CATCH
+        \EFcd{--} \EFc{Rollback the transaction in case of error}
+        \EFk{ROLLBACK}
+
+        PRINT(\EFs{'Couldnt close the course'});
+    \EFk{END} CATCH
+\EFk{END};
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{ModifyCourseOnlineSessionRecording}}
+\label{sec:orgc9d8215}
+Modyfikuj nagranie z CourseOnlineSession
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{ModifyCourseOnlineSessionRecording}
+    @CourseOnlineSessionID \EFt{INT},
+    @NewRecordingLink NVARCHAR(\EFb{MAX})
+\EFk{AS}
+\EFk{BEGIN}
+    \EFk{UPDATE} CourseOnlineSessions
+    \EFk{SET} RecordingLink = @NewRecordingLink
+    \EFk{WHERE} CourseOnlineSessionID = @CourseOnlineSessionID;
+\EFk{END};
 \EFk{GO}
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddWebinar}}
-\label{sec:orgc662948}
+\label{sec:org9485e41}
 Procedura do tworzenia nowego webinaru.
 \begin{Code}
 \begin{Verbatim}
@@ -4634,7 +4779,7 @@ Procedura do tworzenia nowego webinaru.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyWebinarData}}
-\label{sec:orgac58ce4}
+\label{sec:org74d7a87}
 Procedura do modyfikacji danych webinaru.
 \begin{Code}
 \begin{Verbatim}
@@ -4683,7 +4828,7 @@ Procedura do modyfikacji danych webinaru.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DeleteWebinar}}
-\label{sec:orgd8de465}
+\label{sec:org5837754}
 Procedura do usuwania webinaru.
 \begin{Code}
 \begin{Verbatim}
@@ -4719,7 +4864,7 @@ Procedura do usuwania webinaru.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{OpenWebinar}}
-\label{sec:orgf22381a}
+\label{sec:orga3e725d}
 Procedura do otwarcia webinaru przez uczestnika.
 \begin{Code}
 \begin{Verbatim}
@@ -4760,7 +4905,7 @@ Procedura do otwarcia webinaru przez uczestnika.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{DisplayWebinarRecording}}
-\label{sec:org111c309}
+\label{sec:org6dc71d5}
 Procedura do wyświetlania nagrania webinaru.
 \begin{Code}
 \begin{Verbatim}
@@ -4823,7 +4968,7 @@ RAISERROR(\EFs{'There is no recording available for this webinar.'}, \EFhn{16}, 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{UpdateMissingWebinarAttendance}}
-\label{sec:orgf51b00c}
+\label{sec:orgccb2489}
 Procedura do aktualizacji brakującej obecności na webinarze.
 \begin{Code}
 \begin{Verbatim}
@@ -4846,7 +4991,7 @@ Procedura do aktualizacji brakującej obecności na webinarze.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CloseWebinar}}
-\label{sec:orgf2c2992}
+\label{sec:org4b51ddd}
 Procedura do zamknięcia webinaru.
 \begin{Code}
 \begin{Verbatim}
@@ -4865,8 +5010,25 @@ Procedura do zamknięcia webinaru.
 \EFk{GO}
 \end{Verbatim}
 \end{Code}
+\subsection{\texttt{ModifyWebinarRecording}}
+\label{sec:org7dd30a6}
+Procedura do modyfikacji nagrania z Webinaru.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{PROCEDURE} \EFf{ModifyWebinarRecording}
+    @WebinarID \EFt{INT},
+    @NewRecordingLink NVARCHAR(\EFb{MAX})
+\EFk{AS}
+\EFk{BEGIN}
+    \EFk{UPDATE} Webinars
+    \EFk{SET} RecordingLink = @NewRecordingLink
+    \EFk{WHERE} WebinarID = @WebinarID;
+\EFk{END};
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
 \subsection{\texttt{CreateNewPerson}}
-\label{sec:org50b5cc0}
+\label{sec:org97efdd6}
 Procedura do tworzenia nowej osoby w bazie danych.
 \begin{Code}
 \begin{Verbatim}
@@ -4915,7 +5077,7 @@ Procedura do tworzenia nowej osoby w bazie danych.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{UpdatePersonData}}
-\label{sec:org615758b}
+\label{sec:orgcca27d4}
 Procedura do aktualizacji danych osobowych istniejącej osoby.
 \begin{Code}
 \begin{Verbatim}
@@ -4954,7 +5116,7 @@ Procedura do aktualizacji danych osobowych istniejącej osoby.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{RemovePerson}}
-\label{sec:orga8027d6}
+\label{sec:org39d3682}
 Procedura do usunięcia osoby z bazy danych.
 \begin{Code}
 \begin{Verbatim}
@@ -4972,7 +5134,7 @@ Procedura do usunięcia osoby z bazy danych.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddUser}}
-\label{sec:org6b75b5a}
+\label{sec:org210fb53}
 Procedura do dodawania nowego użytkownika.
 \begin{Code}
 \begin{Verbatim}
@@ -5018,7 +5180,7 @@ Procedura do dodawania nowego użytkownika.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddEmployee}}
-\label{sec:org3ca502b}
+\label{sec:orga39550d}
 Procedura do dodawania nowego pracownika.
 \begin{Code}
 \begin{Verbatim}
@@ -5065,7 +5227,7 @@ Procedura do dodawania nowego pracownika.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddProductToCart}}
-\label{sec:org2dc44b7}
+\label{sec:org5cd464e}
 Procedura do dodawania produktu do koszyka użytkownika.
 \begin{Code}
 \begin{Verbatim}
@@ -5092,7 +5254,7 @@ Procedura do dodawania produktu do koszyka użytkownika.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{RemoveProductFromCart}}
-\label{sec:org1398b9d}
+\label{sec:orgb2d7011}
 Procedura do usuwania produktu z koszyka użytkownika.
 \begin{Code}
 \begin{Verbatim}
@@ -5111,7 +5273,7 @@ Procedura do usuwania produktu z koszyka użytkownika.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{SendDiploma}}
-\label{sec:orgbe56aef}
+\label{sec:orgb822128}
 Procedura do wysyłania dyplomu.
 \begin{Code}
 \begin{Verbatim}
@@ -5132,7 +5294,7 @@ Procedura do wysyłania dyplomu.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddRole}}
-\label{sec:org1c351a1}
+\label{sec:orge9b5a3d}
 Procedura do dodawania nowej roli.
 \begin{Code}
 \begin{Verbatim}
@@ -5151,7 +5313,7 @@ Procedura do dodawania nowej roli.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ModifyRole}}
-\label{sec:org7012a57}
+\label{sec:org40586b6}
 Procedura do modyfikacji roli.
 \begin{Code}
 \begin{Verbatim}
@@ -5172,7 +5334,7 @@ Procedura do modyfikacji roli.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{AddEmployeeRole}}
-\label{sec:orgad4e201}
+\label{sec:orgaa47f32}
 Procedura do dodawania roli pracownikowi.
 \begin{Code}
 \begin{Verbatim}
@@ -5192,7 +5354,7 @@ Procedura do dodawania roli pracownikowi.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{RemoveEmployeeRole}}
-\label{sec:orgc246f5b}
+\label{sec:org2bb2acd}
 Procedura do usuwania roli od pracownika.
 \begin{Code}
 \begin{Verbatim}
@@ -5212,7 +5374,7 @@ Procedura do usuwania roli od pracownika.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ChangeProductPrice}}
-\label{sec:org6cf3f7d}
+\label{sec:orgc890285}
 Procedura do zmiany ceny produktu.
 \begin{Code}
 \begin{Verbatim}
@@ -5234,8 +5396,65 @@ Procedura do zmiany ceny produktu.
 \EFk{GO}
 \end{Verbatim}
 \end{Code}
+\subsection{\texttt{getCourseAttendance}}
+\label{sec:orga1ca1f0}
+Funkcja zwracająca historię płatności dla danego użytkownika.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{FUNCTION} \EFf{getCourseAttendance}(@CourseID \EFt{INT})
+\EFk{RETURNS} \EFk{TABLE}
+\EFk{AS}
+\EFk{RETURN}
+(
+    \EFk{SELECT} 
+        cp.CourseParticipantID,
+        u.UserID,
+        pe.FirstName \EFk{AS} UserFirstName,
+        pe.LastName \EFk{AS} UserLastName,
+        \EFk{CASE} 
+            \EFk{WHEN} cos.CourseOfflineSessionID \EFk{IS} \EFk{NOT} \EFk{NULL} \EFk{THEN} \EFs{'Offline'}
+            \EFk{WHEN} con.CourseOnlineSessionID \EFk{IS} \EFk{NOT} \EFk{NULL} \EFk{THEN} \EFs{'Online'}
+            \EFk{WHEN} cst.CourseStationarySessionID \EFk{IS} \EFk{NOT} \EFk{NULL} \EFk{THEN} \EFs{'Stationary'}
+            \EFk{ELSE} \EFs{'Unknown'}
+        \EFk{END} \EFk{AS} SessionType,
+        \EFb{COALESCE}(\EFk{NULL}, con.StartDate, cst.StartDate) \EFk{AS} StartDate,
+        \EFb{COALESCE}(\EFk{NULL}, con.EndDate, cst.EndDate) \EFk{AS} EndDate,
+        cs.ModuleID,
+        \EFk{m}.ModuleName,
+        e.PersonID \EFk{AS} LecturerID,
+        e.FirstName \EFk{AS} LecturerFirstName,
+        e.LastName \EFk{AS} LecturerLastName,
+    ca.Completed \EFk{as} \EFs{'Completed'}
+    \EFk{FROM} 
+        CourseParticipants cp
+    \EFk{INNER} \EFk{JOIN} 
+        Users u \EFk{ON} cp.UserID = u.UserID
+    \EFk{INNER} \EFk{JOIN} 
+        People pe \EFk{ON} u.UserID = pe.PersonID
+  \EFk{INNER} \EFk{JOIN}
+       Courses co \EFk{ON} co.CourseID = cp.CourseID
+    \EFk{INNER} \EFk{JOIN} 
+    Modules \EFk{m} \EFk{ON}  co.CourseID = \EFk{m}.CourseID
+    \EFk{INNER} \EFk{JOIN} 
+        CoursesSessions cs \EFk{ON} cs.ModuleID = \EFk{m}.ModuleID
+    \EFk{LEFT} \EFk{JOIN} 
+        CourseOfflineSessions cos \EFk{ON} cs.CourseSessionID = cos.CourseOfflineSessionID
+    \EFk{LEFT} \EFk{JOIN} 
+        CourseOnlineSessions con \EFk{ON} cs.CourseSessionID = con.CourseOnlineSessionID
+    \EFk{LEFT} \EFk{JOIN} 
+        CourseStationarySessions cst \EFk{ON} cs.CourseSessionID = cst.CourseStationarySessionID
+    \EFk{LEFT} \EFk{JOIN} 
+        People e \EFk{ON} cs.LecturerID = e.PersonID
+  \EFk{LEFT} \EFk{JOIN} 
+    CourseSessionsAttendance ca \EFk{ON} ca.CourseSessionID = cs.CourseSessionID \EFk{AND} ca.CourseParticipantID = cp.CourseParticipantID
+    \EFk{WHERE} 
+        cp.CourseID = @CourseID
+);
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
 \subsection{\texttt{dbo.CanUserPurchasePaidWebinar}}
-\label{sec:org25a42ab}
+\label{sec:org95e16b5}
 Funkcja sprawdzająca, czy użytkownik może zakupić płatny webinar.
 \begin{Code}
 \begin{Verbatim}
@@ -5291,7 +5510,7 @@ Funkcja sprawdzająca, czy użytkownik może zakupić płatny webinar.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{EnrollUserToFreeWebinar}}
-\label{sec:org6952478}
+\label{sec:orgc1d2388}
 Procedura zapisująca użytkownika na bezpłatny webinar.
 \begin{Code}
 \begin{Verbatim}
@@ -5335,7 +5554,7 @@ Procedura zapisująca użytkownika na bezpłatny webinar.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ProcessWebinarPayment}}
-\label{sec:org5db033f}
+\label{sec:orgd27acfc}
 Procedura przetwarzająca płatność za webinar.
 \begin{Code}
 \begin{Verbatim}
@@ -5407,7 +5626,7 @@ Procedura przetwarzająca płatność za webinar.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{CanUserPurchaseCourse}}
-\label{sec:orgbadc97a}
+\label{sec:orgdb5f4be}
 Funkcja sprawdzająca, czy użytkownik może zakupić kurs.
 \begin{Code}
 \begin{Verbatim}
@@ -5465,7 +5684,7 @@ Funkcja sprawdzająca, czy użytkownik może zakupić kurs.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ProcessCoursePayment}}
-\label{sec:org59c5dff}
+\label{sec:org36c15c1}
 Procedura przetwarzająca płatność za kurs.
 \begin{Code}
 \begin{Verbatim}
@@ -5579,7 +5798,7 @@ Procedura przetwarzająca płatność za kurs.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.CanUserPurchasePublicStudySession}}
-\label{sec:org01a1d60}
+\label{sec:org2144c67}
 Funkcja sprawdzająca, czy użytkownik może zakupić pojedyńcze spotkanie studyjne.
 \begin{Code}
 \begin{Verbatim}
@@ -5639,7 +5858,7 @@ Funkcja sprawdzająca, czy użytkownik może zakupić pojedyńcze spotkanie stud
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ProcessPublicStudySessionPayment}}
-\label{sec:org4a1e830}
+\label{sec:org466113c}
 Procedura przetwarzająca płatność za publiczną sesję studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -5706,7 +5925,7 @@ Procedura przetwarzająca płatność za publiczną sesję studiów.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{dbo.CanUserPurchaseStudies}}
-\label{sec:org647020b}
+\label{sec:org4e3f5c9}
 Funkcja sprawdzająca, czy użytkownik może zakupić studia.
 \begin{Code}
 \begin{Verbatim}
@@ -5783,7 +6002,7 @@ Funkcja sprawdzająca, czy użytkownik może zakupić studia.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ProcessStudiesPayment}}
-\label{sec:org5e8a4be}
+\label{sec:org4949735}
 Procedura przetwarzająca płatność za studia.
 \begin{Code}
 \begin{Verbatim}
@@ -5889,7 +6108,7 @@ Procedura przetwarzająca płatność za studia.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{ProcessPayment}}
-\label{sec:orgd335714}
+\label{sec:org4230bab}
 Procedura ogólna przetwarzająca płatność, delegująca do odpowiedniej procedury w zależności od rodzaju produktu.
 \begin{Code}
 \begin{Verbatim}
@@ -5939,7 +6158,7 @@ Procedura ogólna przetwarzająca płatność, delegująca do odpowiedniej proce
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{EnrollUserWithoutImmediatePayment}}
-\label{sec:org280225d}
+\label{sec:org25e58ca}
 Procedura umożliwiająca odroczenie płatności za produkt.
 \begin{Code}
 \begin{Verbatim}
@@ -6023,7 +6242,7 @@ Procedura umożliwiająca odroczenie płatności za produkt.
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{GetEmployeeTimetable}}
-\label{sec:orgb4b3f68}
+\label{sec:org5ab17d5}
 Funkcja zwracająca harmonogram pracownika w określonym przedziale czasowym
 \begin{Code}
 \begin{Verbatim}
@@ -6047,7 +6266,7 @@ Funkcja zwracająca harmonogram pracownika w określonym przedziale czasowym
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{GetUserTimeTable}}
-\label{sec:orgf6e22f3}
+\label{sec:org5a36100}
 Funkcja zwracająca harmonogram zajęć użytkownika w określonym przedziale czasowym
 \begin{Code}
 \begin{Verbatim}
@@ -6074,9 +6293,9 @@ Funkcja zwracająca harmonogram zajęć użytkownika w określonym przedziale cz
 \end{Verbatim}
 \end{Code}
 \section{Triggery}
-\label{sec:org7f4e131}
+\label{sec:org80da93b}
 \subsection{\texttt{tr\_People\_AfterUpdate}}
-\label{sec:org51ac2d8}
+\label{sec:org6b22e78}
 Trigger zapisujący w tabeli PeopleDataChangeHistory zmiany danych osób, takie jak imię, nazwisko, data urodzenia, adres, miasto, region, kod pocztowy, kraj, email i telefon.
 \begin{Code}
 \begin{Verbatim}
@@ -6149,9 +6368,15 @@ Trigger zapisujący w tabeli PeopleDataChangeHistory zmiany danych osób, takie 
         \EFk{OR} i.Email <> d.Email
         \EFk{OR} i.Phone <> d.Phone;
 \EFk{END};
-
-\EFcd{--} \EFc{Trigger rejestrujący w tabeli CartHistory usunięcie produktu z koszyka, zawierający informacje o użytkowniku, produkcie, dacie dodania i usunięcia.}
-\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{TRIGGER} \EFf{trg\_RemoveProductFromCart}
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{trg\_RemoveProductFromCart}}
+\label{sec:orgcc7d976}
+Trigger rejestrujący w tabeli CartHistory usunięcie produktu z koszyka, zawierający informacje o użytkowniku, produkcie, dacie dodania i usunięcia.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{TRIGGER} \EFf{trg\_RemoveProductFromCart}
 \EFk{ON} Carts
 \EFk{AFTER} \EFk{DELETE}
 \EFk{AS}
@@ -6164,11 +6389,11 @@ Trigger zapisujący w tabeli PeopleDataChangeHistory zmiany danych osób, takie 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{RecordPriceChange}}
-\label{sec:org1cfd17d}
+\label{sec:orgf62f454}
 Trigger zapisujący w tabeli ProductPriceChangeHistory zmiany ceny i zaliczki produktów, zawierający identyfikator produktu, starą i nową cenę, starą i nową zaliczkę oraz datę zmiany.
 \begin{Code}
 \begin{Verbatim}
-\color{EFD}\EFk{CREATE} \EFk{TRIGGER} \EFf{RecordPriceChange}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{TRIGGER} \EFf{RecordPriceChange}
 \EFk{ON} Products
 \EFk{AFTER} \EFk{UPDATE}
 \EFk{AS}
@@ -6190,7 +6415,7 @@ Trigger zapisujący w tabeli ProductPriceChangeHistory zmiany ceny i zaliczki pr
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{trg\_CheckOverlap\_MinAttendanceCourse}}
-\label{sec:org128a38f}
+\label{sec:org78c6764}
 Trigger sprawdzający nakładanie się zakresów dat w wymaganiach dotyczących minimalnej frekwencji na kursach.
 \begin{Code}
 \begin{Verbatim}
@@ -6216,7 +6441,7 @@ Trigger sprawdzający nakładanie się zakresów dat w wymaganiach dotyczących 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{trg\_CheckOverlap\_MinAttendanceInternship}}
-\label{sec:org03791ee}
+\label{sec:org5530f82}
 Trigger zapobiegający nakładaniu się zakresów dat w wymaganiach dotyczących minimalnej frekwencji na stażach.
 \begin{Code}
 \begin{Verbatim}
@@ -6242,7 +6467,7 @@ Trigger zapobiegający nakładaniu się zakresów dat w wymaganiach dotyczących
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{trg\_CheckOverlap\_MinAttendanceStudies}}
-\label{sec:orgbe1d2ba}
+\label{sec:org1ed3611}
 Trigger kontrolujący nakładanie się zakresów dat w wymaganiach dotyczących minimalnej frekwencji na studiach.
 \begin{Code}
 \begin{Verbatim}
@@ -6268,7 +6493,7 @@ Trigger kontrolujący nakładanie się zakresów dat w wymaganiach dotyczących 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{trg\_CheckOverlap\_MaxDaysPaymentCourse}}
-\label{sec:org6e9b17b}
+\label{sec:orgff169c5}
 Trigger sprawdzający nakładanie się zakresów dat w regulaminie maksymalnego czasu na zapłatę przed rozpoczęciem kursu.
 \begin{Code}
 \begin{Verbatim}
@@ -6294,7 +6519,7 @@ Trigger sprawdzający nakładanie się zakresów dat w regulaminie maksymalnego 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{trg\_CheckOverlap\_MaxDaysPaymentStudies}}
-\label{sec:org4e436f9}
+\label{sec:org66af9ad}
 Trigger zapobiegający nakładaniu się zakresów dat dotyczących maksymalnego czasu na zapłatę przed rozpoczęciem studiów.
 \begin{Code}
 \begin{Verbatim}
@@ -6320,7 +6545,7 @@ Trigger zapobiegający nakładaniu się zakresów dat dotyczących maksymalnego 
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{trg\_CheckOverlap\_RecordingAccessTime}}
-\label{sec:org70a054b}
+\label{sec:org977cbdd}
 Trigger kontrolujący nakładanie się zakresów dat w dostępie do nagrań webinarów.
 \begin{Code}
 \begin{Verbatim}
@@ -6345,222 +6570,379 @@ Trigger kontrolujący nakładanie się zakresów dat w dostępie do nagrań webi
 \EFk{GO}
 \end{Verbatim}
 \end{Code}
+\subsection{\texttt{trg\_CheckOverlap\_DaysInInternship}}
+\label{sec:orge99d50f}
+Trigger sprawdzający nakładanie się zakresów dat w określonych dniach stażu.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{OR} \EFk{ALTER} \EFk{TRIGGER} \EFf{trg\_CheckOverlap\_DaysInInternship}
+\EFk{ON} DaysInInternship
+\EFk{AFTER} \EFk{INSERT}, \EFk{UPDATE}
+\EFk{AS}
+\EFk{BEGIN}
+    IF \EFk{EXISTS} (
+        \EFk{SELECT} \EFhn{1} 
+        \EFk{FROM} DaysInInternship \EFk{m}
+        \EFk{INNER} \EFk{JOIN} inserted i \EFk{ON} \EFk{m}.InternshipID = i.InternshipID \EFk{OR} (\EFk{m}.InternshipID \EFk{IS} \EFk{NULL} \EFk{AND} i.InternshipID \EFk{IS} \EFk{NULL})
+        \EFk{WHERE} 
+            \EFk{m}.DaysInInternshipID <> i.DaysInInternshipID \EFk{AND}
+            (\EFk{m}.StartDate < \EFb{COALESCE}(i.EndDate, \EFs{'9999-12-31'}) \EFk{AND} \EFb{COALESCE}(\EFk{m}.EndDate, \EFs{'9999-12-31'}) > i.StartDate)
+    )
+    \EFk{BEGIN}
+        RAISERROR (\EFs{'Date range overlaps with existing entry.'}, \EFhn{16}, \EFhn{1});
+        \EFk{ROLLBACK} \EFk{TRANSACTION};
+    \EFk{END}
+\EFk{END};
+\EFk{GO}
+\end{Verbatim}
+\end{Code}
 \section{Indeksy}
-\label{sec:org4fc2bf6}
+\label{sec:orgf2ca4e4}
 \subsection{\texttt{idx\_webinars}}
-\label{sec:org6125f2c}
-Indeksy w tabeli Webinars: wykładowca, tłumacz, język, data rozpoczęcia, data zakończenia
+\label{sec:orgfa947a8}
+Indeksy w tabeli WebinarParticipants: użytkownik, webinar, ID płatności pełnej ceny
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_webinars \EFk{ON} Webinars (LecturerID, TranslatorID, LanguageID, StartDate, EndDate);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_webinarparticipants}}
-\label{sec:orgd820a04}
-Indeksy w tabeli WebinarParticipants: użytkownik, webinar, ID płatności pełnej ceny
+\label{sec:orgdc32191}
+Indeksy w tabeli Courses: data rozpoczęcia, data zakończenia, koordynator, język
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_webinarparticipants \EFk{ON} WebinarParticipants (UserID, WebinarID, FullPricePaymentID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_courses}}
-\label{sec:orgaff4acc}
-Indeksy w tabeli Courses: data rozpoczęcia, data zakończenia, koordynator, język
+\label{sec:org6cacf8b}
+Indeksy w tabeli Payments: użytkownik, produkt, data
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_courses \EFk{ON} Courses (StartDate, EndDate, CoordinatorID, LanguageID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_payments}}
-\label{sec:orgee970a3}
-Indeksy w tabeli Payments: użytkownik, produkt, data
+\label{sec:org861eaeb}
+Indeksy w tabeli CoursesSessions: wykładowca, tłumacz, moduł
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_payments \EFk{ON} Payments (UserID, ProductID, \EFt{Date});
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_coursessessions}}
-\label{sec:orgf22b259}
-Indeksy w tabeli CoursesSessions: wykładowca, tłumacz, moduł
+\label{sec:orgf6d48dc}
+Indeksy w tabeli CourseOnlineSessions: data rozpoczęcia, data zakończenia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_coursessessions \EFk{ON} CoursesSessions (LecturerID, TranslatorID, ModuleID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_courseonlinesessions}}
-\label{sec:org4cdb64d}
-Indeksy w tabeli CourseOnlineSessions: data rozpoczęcia, data zakończenia
+\label{sec:org54cd52c}
+Indeksy w tabeli CourseStationarySessions: data rozpoczęcia, data zakończenia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_courseonlinesessions \EFk{ON} CourseOnlineSessions (StartDate, EndDate);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_coursestationarysessions}}
-\label{sec:orgcca0112}
-Indeksy w tabeli CourseStationarySessions: data rozpoczęcia, data zakończenia
+\label{sec:org87ce821}
+Indeksy w tabeli CourseParticipants: kurs, użytkownik, data dodania
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_coursestationarysessions \EFk{ON} CourseStationarySessions (StartDate, EndDate);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_courseparticipants}}
-\label{sec:org61bb2d8}
-Indeksy w tabeli CourseParticipants: kurs, użytkownik, data dodania
+\label{sec:orgae3ebe2}
+Indeksy w tabeli DaysInInternship: data rozpoczęcia, data zakończenia, staż
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_courseparticipants \EFk{ON} CourseParticipants (CourseID, UserID, AddedAt);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_daysininternship}}
-\label{sec:org631e5c5}
-Indeksy w tabeli DaysInInternship: data rozpoczęcia, data zakończenia, staż
+\label{sec:org7535ad3}
+Indeksy w tabeli DiplomasSent: użytkownik, data wysłania
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_daysininternship \EFk{ON} DaysInInternship (StartDate, EndDate, InternshipID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_diplomassent}}
-\label{sec:orgedef52e}
-Indeksy w tabeli DiplomasSent: użytkownik, data wysłania
+\label{sec:orgd630a4a}
+Indeksy w tabeli EmployeeRoles: pracownik, rola
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_diplomassent \EFk{ON} DiplomasSent (UserID, SentAt);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_employeeroles}}
-\label{sec:org16b1453}
-Indeksy w tabeli EmployeeRoles: pracownik, rola
+\label{sec:org06d784c}
+Indeksy w tabeli Exams: przedmiot, data rozpoczęcia, data zakończenia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_employeeroles \EFk{ON} EmployeeRoles (EmployeeID, RoleID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_exams}}
-\label{sec:org307a97a}
-Indeksy w tabeli Exams: przedmiot, data rozpoczęcia, data zakończenia
+\label{sec:orgb553f01}
+Indeksy w tabeli ExamsGrades: student, egzamin
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_exams \EFk{ON} Exams (SubjectID, StartDate, EndDate);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_examsgrades}}
-\label{sec:orga450c2a}
-Indeksy w tabeli ExamsGrades: student, egzamin
+\label{sec:orgf170340}
+Indeksy w tabeli InternshipDetails: student, data ukończenia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_examsgrades \EFk{ON} ExamsGrades (StudentID, ExamID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_internshipdetails}}
-\label{sec:orge622f0b}
-Indeksy w tabeli InternshipDetails: student, data ukończenia
+\label{sec:orgb98e3e8}
+Indeksy w tabeli Internships: studia, data rozpoczęcia, data zakończenia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_internshipdetails \EFk{ON} InternshipDetails (StudentID, CompletedAt);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_internships}}
-\label{sec:orga07d1f4}
-Indeksy w tabeli Internships: studia, data rozpoczęcia, data zakończenia
+\label{sec:org929ab57}
+Indeksy w tabeli MaxDaysForPaymentBeforeCourseStart: data rozpoczęcia, data zakończenia, kurs
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_internships \EFk{ON} Internships (StudiesID, StartDate, EndDate);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_maxdayspaymentcourse}}
-\label{sec:org54ed822}
-Indeksy w tabeli MaxDaysForPaymentBeforeCourseStart: data rozpoczęcia, data zakończenia, kurs
+\label{sec:orge66084c}
+Indeksy w tabeli MaxDaysForPaymentBeforeStudiesStart: data rozpoczęcia, data zakończenia, studia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_maxdayspaymentcourse \EFk{ON} MaxDaysForPaymentBeforeCourseStart (StartDate, EndDate, CourseID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_maxdayspaymentstudies}}
-\label{sec:org1ce1c9a}
-Indeksy w tabeli MaxDaysForPaymentBeforeStudiesStart: data rozpoczęcia, data zakończenia, studia
+\label{sec:orgfadf66c}
+Indeksy w tabeli MinAttendancePercentageToPassCourse: data rozpoczęcia, data zakończenia, kurs
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_maxdayspaymentstudies \EFk{ON} MaxDaysForPaymentBeforeStudiesStart (StartDate, EndDate, StudiesID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_minattendancecourse}}
-\label{sec:org6733a4e}
-Indeksy w tabeli MinAttendancePercentageToPassCourse: data rozpoczęcia, data zakończenia, kurs
+\label{sec:org7c23fe8}
+Indeksy w tabeli MinAttendancePercentageToPassInternship: data rozpoczęcia, data zakończenia, staż
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_minattendancecourse \EFk{ON} MinAttendancePercentageToPassCourse (StartDate, EndDate, CourseID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_minattendanceinternship}}
-\label{sec:orgef6bef5}
-Indeksy w tabeli MinAttendancePercentageToPassInternship: data rozpoczęcia, data zakończenia, staż
+\label{sec:orgbcd9a1d}
+Indeksy w tabeli MinAttendancePercentageToPassStudies: data rozpoczęcia, data zakończenia, studia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_minattendanceinternship \EFk{ON} MinAttendancePercentageToPassInternship (StartDate, EndDate, InternshipID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_minattendancestudies}}
-\label{sec:org5d82bee}
-Indeksy w tabeli MinAttendancePercentageToPassStudies: data rozpoczęcia, data zakończenia, studia
+\label{sec:orgd5fb14c}
+Indeksy w tabeli People: data urodzenia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_minattendancestudies \EFk{ON} MinAttendancePercentageToPassStudies (StartDate, EndDate, StudiesID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_people}}
-\label{sec:orgb11f8af}
-Indeksy w tabeli People: data urodzenia
+\label{sec:orgaa23bb4}
+Indeksy w tabeli Products: cena, data dodania, data zamknięcia
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_people \EFk{ON} People (BirthDate);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_products}}
-\label{sec:org98ea044}
-Indeksy w tabeli Products: cena, data dodania, data zamknięcia
+\label{sec:org6c7bd2f}
+Indeksy w tabeli RecordingAccessTime: data rozpoczęcia, data zakończenia, webinar
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_products \EFk{ON} Products (Price, AddedAt, ClosedAt);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_recordingaccesstime}}
-\label{sec:orgac6ec48}
-Indeksy w tabeli RecordingAccessTime: data rozpoczęcia, data zakończenia, webinar
+\label{sec:org63bea4b}
+Indeksy w tabeli Students: użytkownik, studia, data dodania
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_recordingaccesstime \EFk{ON} RecordingAccessTime (StartDate, EndDate, WebinarID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_students}}
-\label{sec:org3209623}
-Indeksy w tabeli Students: użytkownik, studia, data dodania
+\label{sec:org335d00d}
+Indeksy w tabeli Studies: data rozpoczęcia, data zakończenia, koordynator, język
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_students \EFk{ON} Students (UserID, StudiesID, AddedAt);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_studies}}
-\label{sec:org1ce0390}
-Indeksy w tabeli Studies: data rozpoczęcia, data zakończenia, koordynator, język
+\label{sec:org25d3292}
+Indeksy w tabeli StudiesSessions: przedmiot, data rozpoczęcia, data zakończenia, wykładowca, język
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_studies \EFk{ON} Studies (StartDate, EndDate, CoordinatorID, LanguageID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_studiessessions}}
-\label{sec:org5265a94}
-Indeksy w tabeli StudiesSessions: przedmiot, data rozpoczęcia, data zakończenia, wykładowca, język
+\label{sec:org5e7953f}
+Indeksy w tabeli Subjects: studia, koordynator
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_studiessessions \EFk{ON} StudiesSessions (SubjectID, StartDate, EndDate, LecturerID, LanguageID);
 \end{Verbatim}
 \end{Code}
 \subsection{\texttt{idx\_subjects}}
-\label{sec:orga305b83}
-Indeksy w tabeli Subjects: studia, koordynator
+\label{sec:org6da4363}
+
 \begin{Code}
 \begin{Verbatim}
 \color{EFD}\EFk{CREATE} INDEX idx\_subjects \EFk{ON} Subjects (StudiesID, CoordinatorID);
+\end{Verbatim}
+\end{Code}
+\section{Role}
+\label{sec:org320dcd1}
+\subsection{\texttt{AcademicTeacherRole}}
+\label{sec:org83ed54d}
+Księgowa - ma dostęp do widoków związanych z finansami
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [CreateSubject] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifySubject] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [CreateSemesterOfStudies] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [AddExam] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyExam] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [UpdateExamGrade] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [AddInternship] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyInternship] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [UpdateInternshipDetail] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [UpdateAttendance] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [AttendanceListForEachSession] \EFk{TO} [AcademicTeacherRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [GeneralAttendance] \EFk{TO} [AcademicTeacherRole];
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{AccountantRole}}
+\label{sec:orgd965d1f}
+Administrator - zarządza bazą danych, nieograniczone uprawnienia
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} [AccountantRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[TotalIncomeForProducts] \EFk{TO} [AccountantRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[RevenueSummaryByProductType] \EFk{TO} [AccountantRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[Loaners] \EFk{TO} [AccountantRole];
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{AdministratorRole}}
+\label{sec:org912a375}
+Nauczyciel związany z kursami Może tworzyć modyfikować kursy, zajęcia, moduły, wpisywać obecności
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} AdministratorRole;
+\EFk{GRANT} CONTROL \EFk{ON} DATABASE::u\_karamon \EFk{TO} [AdministratorRole];
+\EFk{GRANT} \EFk{VIEW} DEFINITION \EFk{TO} [AdministratorRole];
+\EFk{GRANT} \EFk{VIEW} DATABASE \EFk{STATE} \EFk{TO} [AdministratorRole];
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{CoursesTeacherRole}}
+\label{sec:orgbe54204}
+Dyrektor - odroczenie płatności, widoki dotyczące finansów, wyników pracowników, nadawanie pracownikom ról. Utworzenie/modyfikacja studiów. Utworzenie/modyfikacja kierunku studiów. Dostęp do raportów finansowych dostęp do raportów dotyczących pracowników.
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [CreateCourse] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyCourse] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [CreateModule] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyModule] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [DeleteModule] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyOnlineCourseSession] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyOfflineCourseSession] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [ModifyStationaryCourseSession] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [DeleteCourseSession] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [UpdateAttendance] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [DeleteAttendance] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [UpdateCourseSessionAttendance] \EFk{TO} [CoursesTeacherRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [DeleteCourseSessionAttendance] \EFk{TO} [CoursesTeacherRole];
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{HeadMasterRole;}}
+\label{sec:org37d212e}
+Sekretariat - wysyłanie dyplomów, raporty bilokacji, informacje o pracownikach i uczniach
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} HeadMasterRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} TotalIncomeForProducts \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} RevenueSummaryByProductType \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} AddEmployee \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} AddRole \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ModifyRole \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} AddEmployeeRole \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} RemoveEmployeeRole \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} CreateSemesterOfStudies \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ModifyStudies \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} AddFieldOfStudy \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} DeleteFieldOfStudies \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} EmployeeStatistics \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} EmployeeTimeTable \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} ActivityConflicts \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} EnrollUserWithoutImmediatePayment \EFk{TO} HeadMasterRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ChangeProductPrice \EFk{TO} HeadMasterRole;
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{SecretariatRole}}
+\label{sec:org76d117c}
+Tłumacz - dodawanie/modyfikacja nagrania w celu dodania tłumaczenia
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} [SecretariatRole];\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [dbo].[SendDiploma] \EFk{TO} [SecretariatRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[EmployeeStatistics] \EFk{TO} [SecretariatRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[Loaners] \EFk{TO} [SecretariatRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[AttendanceListForEachSession] \EFk{TO} [SecretariatRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[GeneralAttendance] \EFk{TO} [SecretariatRole];
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} [dbo].[NumberOfPeopleRegisteredForEvents] \EFk{TO} [SecretariatRole];
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{TranslatorRole;}}
+\label{sec:org022dfaf}
+Wykładowcy webinariów - tworzenie/modyfikacja webinarów
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} TranslatorRole;\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ModifyOnlineCourseSession \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ModifyOnlineStudySession \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ModifyOnlineStudiesSessionRecording \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} ModifyWebinarRecording \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} Webinars \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} CoursesSessions \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} CourseOnlineSessions \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} CourseOfflineSessions \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} StudiesSessions \EFk{TO} TranslatorRole;
+\EFk{GRANT} \EFk{SELECT} \EFk{ON} OnlineStudiesSessions \EFk{TO} TranslatorRole;
+\end{Verbatim}
+\end{Code}
+\subsection{\texttt{WebinarLecturerRole}}
+\label{sec:org70ab7a4}
+
+\begin{Code}
+\begin{Verbatim}
+\color{EFD}\EFk{CREATE} \EFk{ROLE} [WebinarLecturerRole];\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [dbo].[AddWebinar] \EFk{TO} [WebinarLecturerRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [dbo].[ModifyWebinarData] \EFk{TO} [WebinarLecturerRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [dbo].[DeleteWebinar] \EFk{TO} [WebinarLecturerRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [dbo].[ModifyWebinarRecording] \EFk{TO} [WebinarLecturerRole];
+\EFk{GRANT} \EFk{EXECUTE} \EFk{ON} [dbo].[CloseWebinar] \EFk{TO} [WebinarLecturerRole];
 \end{Verbatim}
 \end{Code}
 \end{document}

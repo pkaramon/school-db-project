@@ -68,6 +68,7 @@ BEGIN
         OR i.Email <> d.Email
         OR i.Phone <> d.Phone;
 END;
+GO
 
 -- Trigger rejestrujący w tabeli CartHistory usunięcie produktu z koszyka, zawierający informacje o użytkowniku, produkcie, dacie dodania i usunięcia.
 CREATE OR ALTER TRIGGER trg_RemoveProductFromCart
@@ -82,7 +83,7 @@ END;
 GO
 
 -- Trigger zapisujący w tabeli ProductPriceChangeHistory zmiany ceny i zaliczki produktów, zawierający identyfikator produktu, starą i nową cenę, starą i nową zaliczkę oraz datę zmiany.
-CREATE TRIGGER RecordPriceChange
+CREATE OR ALTER TRIGGER RecordPriceChange
 ON Products
 AFTER UPDATE
 AS
@@ -246,3 +247,4 @@ BEGIN
         ROLLBACK TRANSACTION;
     END
 END;
+GO

@@ -800,113 +800,170 @@ BEGIN
   PRINT 'Internship detail deleted successfully.';
 END;
 GO
+  
 
--- Procedura do zamykania semestru studiów.
-CREATE OR ALTER PROCEDURE CloseStudies(
-@StudiesID INT
-)
-AS BEGIN
-IF EXISTS( SELECT * FROM Products WHERE ProductID = @StudiesID)
+-- Funkcja zwracająca szczegółową listę obecności dla danego semestru studiów.
+CREATE OR ALTER FUNCTION getStudiesAttendance(@StudiesID INT)
+RETURNS TABLE
+AS
+RETURN (
+    SELECT 
+        s.StudentID, 
+        s.UserID, 
+        p.FirstName, 
+        p.LastName, 
+        sub.SubjectID, 
+        sub.SubjectName, 
+        ss.StudiesSessionID AS SessionID,
+        CASE
+            WHEN sss.StationaryStudiesSessionID IS NOT NULL THEN 'Stationary'
+            WHEN oss.OnlineStudiesSessionID IS NOT NULL THEN 'Online'
+            ELSE 'Unknown'
+        END AS SessionType,
+        ss.StartDate, 
+        ss.EndDate, 
+        ssa.Completed
+    FROM 
+        StudiesSessions ss
+    INNER JOIN 
+        StudiesSessionsAttendence ssa ON ss.StudiesSessionID = ssa.SessionID
+    INNER JOIN 
+        Students s ON ssa.StudentID = s.StudentID
+    INNER JOIN 
+        People p ON s.UserID = p.PersonID
+    INNER JOIN 
+        Subjects sub ON ss.SubjectID = sub.SubjectID
+    LEFT JOIN 
+        StationaryStudiesSessions sss ON ss.StudiesSessionID = sss.StationaryStudiesSessionID
+    LEFT JOIN 
+        OnlineStudiesSessions oss ON ss.StudiesSessionID = oss.OnlineStudiesSessionID
+    WHERE 
+        sub.StudiesID = @StudiesID
+);
+GO
+
+-- Procedura do zamykania semestru studiów. Sprawdza czy dany student zdał egzaminy, zaliczył staże, ma odpowiednią obecność i jeżeli tak to wpisuje zaliczenie semestru studiów.
+CREATE OR ALTER PROCEDURE CloseStudies(@StudiesID INT)
+AS
 BEGIN
-    UPDATE Products
-    SET ClosedAt = GETDATE()
-    WHERE ProductID = @StudiesID
+    BEGIN TRY
+        BEGIN TRANSACTION
 
-    DECLARE @ExpectedSessionAttendancePercentage DECIMAL
-    SET @ExpectedSessionAttendancePercentage = dbo.GetMinAttendancePercentageForStudies(@StudiesID);
+        -- Declare variables
+        DECLARE @MinAttendancePercentage DECIMAL(6,4);
 
-    DECLARE @StudentCursor CURSOR;
-    SET @StudentCursor = CURSOR FOR
-        SELECT StudentID FROM Students WHERE StudiesID = @StudiesID
+        -- Get minimum attendance percentage for the studies from the function
+        SELECT @MinAttendancePercentage = dbo.GetMinAttendancePercentageForStudies(@StudiesID);
 
-    DECLARE @StudentID INT;
+        -- Temporary table to store students' data
+        CREATE TABLE #StudentData (
+            StudentID INT,
+            SubjectID INT,
+            TotalSessions INT,
+            AttendedSessions INT,
+            MadeUpSessions INT,
+            EffectiveAttendance DECIMAL(6,4),
+            HasPassed BIT,
+            InternshipCompleted BIT,
+            ExamsPassed BIT
+        );
 
-    OPEN @StudentCursor;
-        FETCH NEXT FROM @StudentCursor INTO @StudentID;
-        WHILE @@FETCH_STATUS = 0
-            BEGIN
-                DECLARE @CompletedInternship BIT;
-                SET @CompletedInternship = (
-                    SELECT Completed FROM InternshipDetails
-                    JOIN Internships ON InternshipDetails.IntershipID = Internships.InternshipID
-                    WHERE StudiesID = @StudiesID AND StudentID = @StudentID
-                    )
+        -- Populate the temporary table with initial data
+        INSERT INTO #StudentData (StudentID, SubjectID, TotalSessions, AttendedSessions, MadeUpSessions, EffectiveAttendance, HasPassed)
+        SELECT 
+            s.StudentID,
+            ss.SubjectID,
+            (SELECT COUNT(*) FROM StudiesSessions ss2 WHERE ss2.SubjectID = ss.SubjectID) AS TotalSessions,
+            SUM(CASE WHEN ssa.Completed = 1 THEN 1 ELSE 0 END) AS AttendedSessions,
+            0 AS MadeUpSessions, -- Initial value, will be updated later
+            0.0 AS EffectiveAttendance, -- Initial value, will be updated later
+            0 AS HasPassed -- Initial value, will be updated later
+        FROM Students s
+        LEFT JOIN StudiesSessionsAttendence ssa ON s.StudentID = ssa.StudentID
+        LEFT JOIN StudiesSessions ss ON ssa.SessionID = ss.StudiesSessionID
+        WHERE s.StudiesID = @StudiesID
+        GROUP BY s.StudentID, ss.SubjectID;
 
-                DECLARE @PassedAllExams BIT;
-                SET @PassedAllExams = 1;
 
-                DECLARE @ExamsCursor CURSOR;
-                SET @ExamsCursor = CURSOR FOR (
-                    SELECT FinalGrade FROM Subjects
-                    JOIN Exams
-                    ON Subjects.SubjectID = Exams.SubjectID
-                    JOIN ExamsGrades
-                    ON Exams.ExamID = ExamsGrades.ExamID
-                    WHERE StudiesID = @StudiesID AND StudentID = @StudentID
-                    )
+        -- Update the table with made up sessions
+        UPDATE #StudentData
+        SET MadeUpSessions = (
+            SELECT SUM(smup.AttendanceValue)
+            FROM MadeUpAttendance mup
+            JOIN SubjectMakeUpPossibilities smup ON mup.SubjectID = smup.SubjectID AND mup.ProductID = smup.ProductID
+            WHERE mup.StudentID = #StudentData.StudentID AND mup.SubjectID = #StudentData.SubjectID
+        );
 
-                DECLARE @Grade DECIMAL;
+        -- Calculate effective attendance for each student in each subject
+        UPDATE #StudentData
+        SET EffectiveAttendance = (CAST(AttendedSessions AS DECIMAL) + CAST(MadeUpSessions AS DECIMAL)) / CAST(TotalSessions AS DECIMAL);
 
-                OPEN @ExamsCursor;
-                    FETCH NEXT FROM @ExamsCursor INTO @Grade;
-                        WHILE @@FETCH_STATUS = 0
-                            BEGIN
-                                IF @Grade = 2.0
-                                    BEGIN
-                                        SET @PassedAllExams = 0;
-                                    end
-                                FETCH NEXT FROM @ExamsCursor INTO @Grade;
-                            end
+        -- Determine if the student has passed based on the effective attendance and minimum required attendance
+        UPDATE #StudentData
+        SET HasPassed = CASE WHEN EffectiveAttendance >= @MinAttendancePercentage THEN 1 ELSE 0 END;
 
-                DECLARE @CompletedAllSessions BIT;
-                SET @CompletedAllSessions = 1;
+        -- Check if each student has completed all internships
+        UPDATE #StudentData
+        SET InternshipCompleted = CASE 
+            WHEN EXISTS (
+                SELECT 1
+                FROM InternshipDetails id
+                JOIN Internships i ON id.IntershipID = i.InternshipID
+                WHERE id.StudentID = #StudentData.StudentID AND i.StudiesID = @StudiesID AND id.Completed = 1
+                GROUP BY id.StudentID
+                HAVING COUNT(id.IntershipID) = (SELECT COUNT(InternshipID) FROM Internships WHERE StudiesID = @StudiesID)
+            ) THEN 1
+            ELSE 0
+        END;
 
-                DECLARE @SessionsCursor CURSOR;
-                SET @SessionsCursor = CURSOR FOR (
-                    SELECT Subjects.SubjectID, COUNT(SessionID) AS AllSessions, SUM(IIF(Completed=1, 1, Null)) As CompletedSessions FROM StudiesSessionsAttendence
-                    JOIN StudiesSessions ON StudiesSessionsAttendence.SessionID = StudiesSessions.StudiesSessionID
-                    JOIN Subjects ON StudiesSessions.SubjectID = Subjects.SubjectID
-                    WHERE StudentID = @StudentID AND StudiesID = @StudiesID
-                    GROUP BY Subjects.SubjectID
-                )
+        -- Check if each student has passed all exams with a grade >= 3.0
+        UPDATE #StudentData
+        SET ExamsPassed = CASE 
+            WHEN NOT EXISTS (
+                SELECT 1
+                FROM ExamsGrades eg
+                JOIN Exams e ON eg.ExamID = e.ExamID
+                JOIN Subjects sub ON e.SubjectID = sub.SubjectID
+                WHERE eg.StudentID = #StudentData.StudentID AND sub.StudiesID = @StudiesID AND eg.FinalGrade < 3.0
+            ) THEN 1
+            ELSE 0
+        END;
 
-                DECLARE @SubjectID INT;
-                DECLARE @AllSessions INT;
-                DECLARE @CompletedSessions INT;
+        -- Update the Students table to set Completed = 1 for those who passed everything
+        UPDATE s
+        SET s.Completed = 1
+        FROM Students s
+        JOIN #StudentData sd ON s.StudentID = sd.StudentID
+        WHERE sd.HasPassed = 1 AND sd.InternshipCompleted = 1 AND sd.ExamsPassed = 1 AND s.StudiesID = @StudiesID;
 
-                DECLARE @CompletedSessionsPercentage DECIMAL;
+        -- Final output of the procedure: StudentID, SubjectID, HasPassed, InternshipCompleted, ExamsPassed
+        SELECT * FROM #StudentData;
 
-                OPEN @SessionsCursor;
-                    FETCH NEXT FROM @SessionsCursor INTO @SubjectID, @AllSessions, @CompletedSessions;
-                        WHILE @@FETCH_STATUS = 0
-                            BEGIN
-                                SET @CompletedSessionsPercentage = @CompletedSessions / @AllSessions;
-                                IF @CompletedSessionsPercentage < @ExpectedSessionAttendancePercentage
-                                    BEGIN
-                                        SET @CompletedAllSessions = 0;
-                                    end
-                                FETCH NEXT FROM @SessionsCursor INTO @SubjectID, @AllSessions, @CompletedSessions;
-                            end
+        -- Clean up temporary table
+        DROP TABLE #StudentData;
 
-                IF @CompletedInternship = 1 AND @PassedAllExams = 1 AND @CompletedAllSessions = 1
-                    BEGIN
-                        UPDATE Students
-                        SET Completed = 1
-                        WHERE StudentID = @StudentID AND StudiesID = @StudiesID
-                    end
-
-                FETCH NEXT FROM @StudentCursor INTO @StudentID;
-            end
-end
-ELSE
-BEGIN
-    print 'Studies do not exist.'
-end
-end;
+        COMMIT TRANSACTION
+    END TRY
+    BEGIN CATCH
+        -- Error handling and rollback
+        ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH
+END;
 GO
 
 
-
+-- Procedura do modyfikacji nagarania ze studyjnego spotkania online.
+CREATE OR ALTER PROCEDURE ModifyOnlineStudiesSessionRecording
+    @OnlineStudiesSessionID INT,
+    @NewRecordingLink NVARCHAR(MAX)
+AS
+BEGIN
+    UPDATE OnlineStudiesSessions
+    SET RecordingLink = @NewRecordingLink
+    WHERE OnlineStudiesSessionID = @OnlineStudiesSessionID;
+END;
+GO
 -- Procedura tworząca kurs.
 CREATE OR ALTER PROCEDURE CreateCourse
     @CourseName nvarchar(max),
@@ -1237,6 +1294,7 @@ BEGIN
 END;
 GO
 
+-- Usuń wpis do listy obecności.
 CREATE OR ALTER PROCEDURE DeleteCourseSessionAttendance
     @CourseParticipantID int,
     @CourseSessionID int
@@ -1248,58 +1306,80 @@ BEGIN
 END;
 GO
 
+-- Procedura zamykająca kurs. Sprawdza ona na podstawie obecności kto zaliczył kurs i wpisuje zaliczenie.
+CREATE OR ALTER PROCEDURE CloseCourse(@CourseID INT)
+AS
+BEGIN
+    -- Start the transaction
+    BEGIN TRANSACTION
 
-
--- Procedura zamkykająca kurs.
-CREATE OR ALTER PROCEDURE CloseCourse(
-    @CourseID INT
-)
-AS BEGIN
-    IF EXISTS( SELECT * FROM Products WHERE ProductID = @CourseID)
-    BEGIN
+    BEGIN TRY
+        -- Update the ClosedAt date for the course in Products table
         UPDATE Products
         SET ClosedAt = GETDATE()
-        WHERE ProductID = @CourseID
+        FROM Products
+        INNER JOIN Courses ON Products.ProductID = Courses.CourseID
+        WHERE Courses.CourseID = @CourseID
 
-        DECLARE @ExpectedAttendancePercentage DECIMAL
-        SET @ExpectedAttendancePercentage = (SELECT AttendancePercentage FROM MinAttendancePercentageToPassCourse WHERE CourseID = @CourseID);
+        -- Get the minimum attendance percentage for the course
+        DECLARE @MinAttendancePercentage DECIMAL(6, 4)
+        SELECT @MinAttendancePercentage = dbo.GetMinAttendancePercentageForCourse(@CourseID)
 
-        DECLARE @AttendanceCursor CURSOR;
-        SET @AttendanceCursor = CURSOR FOR
-            SELECT CourseParticipantID, Count(CourseSessionID) as AllSessions, SUM(IIF(Completed=1, 1, Null)) AS CompletedSessions
-            FROM CourseSessionsAttendance
-            JOIN Modules
-            ON CourseSessionsAttendance.CourseSessionID = ModuleID
-            WHERE CourseID = @CourseID
-            GROUP BY CourseParticipantID, CourseID;
+        -- Temporary table to store module attendance for each participant
+        DECLARE @ModuleAttendanceStats TABLE (CourseParticipantID INT, ModuleID INT, AllSessionsCompleted BIT)
 
-        DECLARE @ParticipantID INT;
-        DECLARE @AllSessions INT;
-        DECLARE @CompletedSessions INT;
-        DECLARE @ParticipantAttendancePercentage DECIMAL;
+        -- Insert module attendance stats for each participant
+        INSERT INTO @ModuleAttendanceStats (CourseParticipantID, ModuleID, AllSessionsCompleted)
+        SELECT 
+            cp.CourseParticipantID,
+            cs.ModuleID,
+            CASE WHEN COUNT(csa.CourseSessionID) = SUM(CASE WHEN csa.Completed = 1 THEN 1 ELSE 0 END) THEN 1 ELSE 0 END
+        FROM 
+            CourseParticipants cp
+    INNER JOIN 
+            CourseSessionsAttendance csa ON cp.CourseParticipantID = csa.CourseParticipantID
+    INNER JOIN 
+            CoursesSessions cs ON cs.CourseSessionID = csa.CourseSessionID
+        WHERE 
+            cp.CourseID = @CourseID
+        GROUP BY 
+            cp.CourseParticipantID, cs.ModuleID
 
+        -- Update the CourseParticipants table for those who have completed the course
+        UPDATE cp
+        SET Completed = 1
+        FROM CourseParticipants cp
+        WHERE cp.CourseID = @CourseID
+        AND 
+        (
+            SELECT CAST(CAST(SUM(CAST(mat.AllSessionsCompleted AS INT)) AS DECIMAL) / NULLIF(COUNT(mat.ModuleID), 0) AS DECIMAL(5, 2))
+            FROM @ModuleAttendanceStats mat
+            WHERE mat.CourseParticipantID = cp.CourseParticipantID
+        ) >= @MinAttendancePercentage
 
-        OPEN @AttendanceCursor;
-            FETCH NEXT FROM @AttendanceCursor INTO @ParticipantID, @AllSessions, @CompletedSessions;
-            WHILE @@FETCH_STATUS = 0
-                BEGIN
-                    SET @ParticipantAttendancePercentage = @CompletedSessions / @AllSessions;
-                    IF @ParticipantAttendancePercentage >= @ExpectedAttendancePercentage
-                    BEGIN
-                        UPDATE CourseParticipants
-                        SET Completed = 1
-                        WHERE CourseParticipantID = @ParticipantID AND CourseID = @CourseID
-                    end
-                    FETCH NEXT FROM @AttendanceCursor INTO @ParticipantID, @AllSessions, @CompletedSessions;
-                end
-    end
-    ELSE
-    BEGIN
-        print 'Course does not exist.'
-    end
-end;
+        -- Commit the transaction
+        COMMIT
+    END TRY
+    BEGIN CATCH
+        -- Rollback the transaction in case of error
+        ROLLBACK
+
+        PRINT('Couldnt close the course');
+    END CATCH
+END;
 GO
--- Procedura do tworzenia nowego webinaru.
+
+-- Modyfikuj nagranie z CourseOnlineSession
+CREATE OR ALTER PROCEDURE ModifyCourseOnlineSessionRecording
+    @CourseOnlineSessionID INT,
+    @NewRecordingLink NVARCHAR(MAX)
+AS
+BEGIN
+    UPDATE CourseOnlineSessions
+    SET RecordingLink = @NewRecordingLink
+    WHERE CourseOnlineSessionID = @CourseOnlineSessionID;
+END;
+GO-- Procedura do tworzenia nowego webinaru.
 CREATE OR ALTER PROCEDURE AddWebinar
     @WebinarName nvarchar(max),
     @Description nvarchar(max),
@@ -1528,7 +1608,18 @@ BEGIN
     PRINT 'Webinar with ID ' + CAST(@WebinarID AS NVARCHAR(10)) + ' has been closed.';
 END;
 GO
--- Procedura do tworzenia nowej osoby w bazie danych.
+
+-- Procedura do modyfikacji nagrania z Webinaru.
+CREATE OR ALTER PROCEDURE ModifyWebinarRecording
+    @WebinarID INT,
+    @NewRecordingLink NVARCHAR(MAX)
+AS
+BEGIN
+    UPDATE Webinars
+    SET RecordingLink = @NewRecordingLink
+    WHERE WebinarID = @WebinarID;
+END;
+GO-- Procedura do tworzenia nowej osoby w bazie danych.
 CREATE OR ALTER PROCEDURE CreateNewPerson
     @FirstName NVARCHAR(MAX),
     @LastName NVARCHAR(500),
@@ -1832,6 +1923,58 @@ BEGIN
     -- Print confirmation message
     PRINT 'Product price updated successfully.';
 END;
+GO
+
+-- Funkcja zwracająca historię płatności dla danego użytkownika.
+CREATE OR ALTER FUNCTION getCourseAttendance(@CourseID INT)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        cp.CourseParticipantID,
+        u.UserID,
+        pe.FirstName AS UserFirstName,
+        pe.LastName AS UserLastName,
+        CASE 
+            WHEN cos.CourseOfflineSessionID IS NOT NULL THEN 'Offline'
+            WHEN con.CourseOnlineSessionID IS NOT NULL THEN 'Online'
+            WHEN cst.CourseStationarySessionID IS NOT NULL THEN 'Stationary'
+            ELSE 'Unknown'
+        END AS SessionType,
+        COALESCE(NULL, con.StartDate, cst.StartDate) AS StartDate,
+        COALESCE(NULL, con.EndDate, cst.EndDate) AS EndDate,
+        cs.ModuleID,
+        m.ModuleName,
+        e.PersonID AS LecturerID,
+        e.FirstName AS LecturerFirstName,
+        e.LastName AS LecturerLastName,
+    ca.Completed as 'Completed'
+    FROM 
+        CourseParticipants cp
+    INNER JOIN 
+        Users u ON cp.UserID = u.UserID
+    INNER JOIN 
+        People pe ON u.UserID = pe.PersonID
+  INNER JOIN
+       Courses co ON co.CourseID = cp.CourseID
+    INNER JOIN 
+    Modules m ON  co.CourseID = m.CourseID
+    INNER JOIN 
+        CoursesSessions cs ON cs.ModuleID = m.ModuleID
+    LEFT JOIN 
+        CourseOfflineSessions cos ON cs.CourseSessionID = cos.CourseOfflineSessionID
+    LEFT JOIN 
+        CourseOnlineSessions con ON cs.CourseSessionID = con.CourseOnlineSessionID
+    LEFT JOIN 
+        CourseStationarySessions cst ON cs.CourseSessionID = cst.CourseStationarySessionID
+    LEFT JOIN 
+        People e ON cs.LecturerID = e.PersonID
+  LEFT JOIN 
+    CourseSessionsAttendance ca ON ca.CourseSessionID = cs.CourseSessionID AND ca.CourseParticipantID = cp.CourseParticipantID
+    WHERE 
+        cp.CourseID = @CourseID
+);
 GO
 -- Funkcja sprawdzająca, czy użytkownik może zakupić płatny webinar.
 CREATE OR ALTER  FUNCTION dbo.CanUserPurchasePaidWebinar

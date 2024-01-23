@@ -1118,7 +1118,7 @@ OR (AdvancePayment IS NULL)</CheckExpression>
                 <Column Id="c339">
                     <Name>Status</Name>
                     <Type>nvarchar(300)</Type>
-                    <Description>Status płatności (np. "Accepted", "Rejected").</Description>
+                    <Description>Status płatności "Successful" albo "Failed"</Description>
                     <Nullable>false</Nullable>
                     <DefaultValue></DefaultValue>
                     <CheckExpression></CheckExpression>
@@ -2436,7 +2436,7 @@ OR PostalCode LIKE '[0-9][0-9][0-9][0-9][0-9][0-9]'</CheckExpression>
                     <Name>StudiesID</Name>
                     <Type>int</Type>
                     <Description>ID studiów</Description>
-                    <Nullable>false</Nullable>
+                    <Nullable>true</Nullable>
                     <DefaultValue></DefaultValue>
                     <CheckExpression></CheckExpression>
                     <Properties/>
@@ -5660,7 +5660,7 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
                 </ReferenceColumn>
             </ReferenceColumns>
             <Cardinality>0..*</Cardinality>
-            <Mandatory>true</Mandatory>
+            <Mandatory>false</Mandatory>
             <OnUpdateAction>None</OnUpdateAction>
             <OnDeleteAction>None</OnDeleteAction>
             <Properties/>
@@ -7015,8 +7015,8 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
             <FixedSize>false</FixedSize>
         </TableDisplay>
         <TableDisplay Id="td110">
-            <X>1992.5</X>
-            <Y>3895.5</Y>
+            <X>1971.5</X>
+            <Y>3900.5</Y>
             <Width>365.0</Width>
             <Height>154.0</Height>
             <LineColor>#000000</LineColor>
@@ -7025,7 +7025,7 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
             <FixedSize>false</FixedSize>
         </TableDisplay>
         <TableDisplay Id="td111">
-            <X>1988.5</X>
+            <X>1964.5</X>
             <Y>3556.5</Y>
             <Width>367.0</Width>
             <Height>143.0</Height>
@@ -7045,8 +7045,8 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
             <FixedSize>false</FixedSize>
         </TableDisplay>
         <TableDisplay Id="td113">
-            <X>1991.5</X>
-            <Y>3722.5</Y>
+            <X>1969.5</X>
+            <Y>3725.5</Y>
             <Width>364.0</Width>
             <Height>149.0</Height>
             <LineColor>#000000</LineColor>
@@ -7065,9 +7065,9 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
             <FixedSize>false</FixedSize>
         </TableDisplay>
         <TableDisplay Id="td115">
-            <X>1984.5</X>
+            <X>1967.5</X>
             <Y>3408.5</Y>
-            <Width>361.0</Width>
+            <Width>365.0</Width>
             <Height>124.0</Height>
             <LineColor>#000000</LineColor>
             <FillColor>#ffffff</FillColor>
@@ -7967,11 +7967,11 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
                 </ControlPoint>
                 <ControlPoint>
                     <X>2351.5</X>
-                    <Y>3934.5</Y>
+                    <Y>3939.5</Y>
                 </ControlPoint>
                 <ControlPoint>
-                    <X>2182.5</X>
-                    <Y>3934.5</Y>
+                    <X>2161.5</X>
+                    <Y>3939.5</Y>
                 </ControlPoint>
             </ControlPoints>
             <PkTableDisplay>td83</PkTableDisplay>
@@ -7988,11 +7988,11 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
                 </ControlPoint>
                 <ControlPoint>
                     <X>2476.5</X>
-                    <Y>3835.5</Y>
+                    <Y>3838.5</Y>
                 </ControlPoint>
                 <ControlPoint>
-                    <X>2304.5</X>
-                    <Y>3835.5</Y>
+                    <X>2282.5</X>
+                    <Y>3838.5</Y>
                 </ControlPoint>
             </ControlPoints>
             <PkTableDisplay>td83</PkTableDisplay>
@@ -8012,7 +8012,7 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
                     <Y>3507.5</Y>
                 </ControlPoint>
                 <ControlPoint>
-                    <X>2335.5</X>
+                    <X>2318.5</X>
                     <Y>3507.5</Y>
                 </ControlPoint>
             </ControlPoints>
@@ -8037,7 +8037,7 @@ JOIN EmployeeData ED ON ED.EmployeeID = SS.LecturerID;</SQLQuery>
                     <Y>3632.5</Y>
                 </ControlPoint>
                 <ControlPoint>
-                    <X>2162.5</X>
+                    <X>2138.5</X>
                     <Y>3632.5</Y>
                 </ControlPoint>
             </ControlPoints>

@@ -1,3 +1,4 @@
+
 -- Indeksy w tabeli Webinars: wykładowca, tłumacz, język, data rozpoczęcia, data zakończenia
 CREATE INDEX idx_webinars ON Webinars (LecturerID, TranslatorID, LanguageID, StartDate, EndDate);
 
@@ -78,3 +79,5 @@ CREATE INDEX idx_studiessessions ON StudiesSessions (SubjectID, StartDate, EndDa
 
 -- Indeksy w tabeli Subjects: studia, koordynator
 CREATE INDEX idx_subjects ON Subjects (StudiesID, CoordinatorID);
+
+GO
