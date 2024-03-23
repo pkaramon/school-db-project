@@ -1,7 +1,7 @@
 import random
 from datetime import datetime, timedelta
 
-random.seed(42)  # VERY IMPORTANT
+random.seed(42)
 
 global_payment_id = 20_000
 def new_payment_id():

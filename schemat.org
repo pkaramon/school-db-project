@@ -1,8 +1,0 @@
-* Schemat
-[[./schemat.png]]
-
-\newpage
-#+ATTR_LATEX: :height 660px
-[[./schemat-rotated.png]]
-
-\newpage

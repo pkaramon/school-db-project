@@ -4,7 +4,7 @@ from contextlib import redirect_stdout
 from math import floor
 import string
 
-random.seed(42)  # VERY IMPORTANT
+random.seed(42)
 
 participant_id = 0
 

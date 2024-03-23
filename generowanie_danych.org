@@ -1,6 +1,0 @@
-* Generowanie danych
-Dane do bazy są generowane przez trzy skrypty napisane w języku Python. 
-+ =courses.py= dla kursów oraz dla pracowników/użytkowników
-+ =studies.py= dla studiów
-+ =webinars.py= dla webinarów
-Kod do generowanie danych został odłączony oddzielnie od tej dokumentacji.
