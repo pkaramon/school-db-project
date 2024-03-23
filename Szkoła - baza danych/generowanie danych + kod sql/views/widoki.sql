@@ -1,4 +1,3 @@
-
 -- Widok prezentujący konflikty terminów zajęć dla użytkowników
 CREATE OR ALTER VIEW ActivityConflicts AS
 WITH AUX AS (
@@ -56,12 +55,14 @@ WHERE
     a1.UserID = a2.UserID;
 GO
 
+
+
 -- Widok prezentujący bieżącą ofertę edukacyjną (webinary, kursy, studia)
 CREATE OR ALTER VIEW SchoolOffer AS
 SELECT 
         W.WebinarID as 'ProductID',
        'Webinar' as'ProductType',
-        W.WebinarName,
+        W.WebinarName as 'ProductName',
         W.Description,
         Price as 'TotalPrice',
         NULL as 'AdvancePayment',

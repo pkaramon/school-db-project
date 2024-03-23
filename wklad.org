@@ -1,0 +1,35 @@
+* Wkład poszczególnych osób
+1. Schemat, funkcje użytkowników i systemu (50%)
+
+   Kilka wspólnych spotkań online na których powstał dokument funkcji użytkowników i systemu oraz sam schemat bazy.
+   + *Piotr Karamon* - (33.3%)
+   + *Joanna Konieczny* - (33.3%)
+   + *Kyrylo Iakymenko* - (33.3%)
+2. Warunki integralnościowe (5%)
+   + *Piotr Karamon* - pracownicy, płatności, użytkownicy plus dodanie opisów do wszystkich pozostałych (33.3%)
+   + *Joanna Konieczny* - dla studiów (33.3%)
+   + *Kyrylo Iakymenko* - dla kursów i webinarów (33.3%)
+3. Generowanie danych (13%)
+   + *Piotr Karamon* - generowanie danych dla webinarów (15%)
+   + *Joanna Konieczny* - generowanie danych dla studiów (50%)
+   + *Kyrylo Iakymenko* - generowanie danych dla kursów/użytkowników/pracowników. (35%)
+4. Procedury, funkcje, triggery widoki (20%)
+   + *Piotr Karamon* - Raporty finansowe, raport bilokacji, harmonogramy, wszystkie triggery,
+        procedury/ funkcje związane z płatnościami, zapisami, webinarami (60%)
+   + *Joanna Konieczny* - Część funkcji i procedur związanych ze studiami (10%)
+   + *Kyrylo Iakymenko* - 3 widoki, 26 funkcji i procedur (30%)
+5. Indeksy & uprawnienia (2%)
+   + *Piotr Karamon* - Wszystko (100%)
+   + *Joanna Konieczny* - (0%)
+   + *Kyrylo Iakymenko* - (0%)
+6. Przygotowanie dokumentacji (10%)
+   + *Piotr Karamon* - Dodanie krótkich opisów do funkcji/procedur/indeksów/widoków. Stworzenie skryptu
+    który z pliku =.sql= schematu bazy danych, pliku =.xml= z vertabelo i innych mniejszych plików zawierających
+    procedury/funkcjie etc. generuje dokumentację do pliku =.org= który poźniej kompilowany jest do pliku =pdf=.
+    (60%)
+   + *Joanna Konieczny* - Opisanie tabel oraz ich wszystkich kolumn (w sekcji studiów) (20%)
+   + *Kyrylo Iakymenko* - Opisanie tabel oraz ich wszystkich kolumn (wszystko poza studiami) (20%)
+7. Sumaryczny wkład
+   + *Piotr Karamon*  - (40.4%)
+   + *Joanna Konieczny* - (28.8%)
+   + *Kyrylo Iakymenko* - (30.8%)

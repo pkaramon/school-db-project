@@ -1,4 +1,4 @@
-
+* Roles
 ** Nauczyciel akademicki 
 Może tworzyć przedmioty/zajęcia, egzaminy, dodawać oceny z egzaminów, wpisywać obecności, tworzyć staże, wpisywać zaliczenia ze stażu, aktualizować ich dane
 #+begin_src sql
